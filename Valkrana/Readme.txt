@@ -30,7 +30,7 @@ Details
 -------
 Gender: Female
 Class: Necromancer
-Racial Features: As a skeleton, Valkrana has several bonuses characteristic of undead: Cold resistance 25, poison immunity, immunity to level drain, and immunity to the Nature's Beauty spell.
+Racial Features: As a skeleton, Valkrana has several undead traits: Cold resistance 25, poison immunity, immunity to level drain, and immunity to the Nature's Beauty spell.
 Stats: STR 8, DEX 10, CON 14, INT 21, WIS 16, CHA 7
 Alignment: Neutral
 Bonuses: Valkrana's fascination with the arcane provides a boost to Lore. She also knows the Simulacrum spell despite her specialist limitation.
@@ -44,12 +44,13 @@ Notes
 -----
 Not romanceable.
 Doesn't banter with other characters.
+Crossmod content is fine.
+Plan to add EET compatibility. 
 Not yet compatible with classic BG2.
 
 --------------------------------------------------------------------
 --------------------------------------------------------------------
 (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/
-Many thanks to Weimer for his work on WeiDU, and all the members of the community whose posts, mods, and
-tutorials have been valuable references. Nuts to see PPG still around after visiting for Unfinished Business all those years ago.
+Many thanks to Weimer for his work on WeiDU, and all the members of the community whose posts, mods, and tutorials have been valuable references. Nuts to see PPG still around after visiting for Unfinished Business all those years ago. Thanks also to Lamei for input and info that helped in the process.
 
-Not compatible with classic BG2. While I intend to add compatibility, I decided to put off to digging out all the errant washers and springs from the bottom of the drawer until after the mod has found its footing with EE.
+Not compatible with classic BG2. While I intend to add compatibility, I decided to put off digging out all the errant washers and springs from the bottom of the drawer until after the mod has found its footing with EE.

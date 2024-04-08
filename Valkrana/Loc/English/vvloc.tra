@@ -132,7 +132,7 @@ While her awkwardness is unabating, it seems to me Valkrana's been looking out f
 @200= ~(You approach a short figure in a wide-brimmed wizard hat, and the urchin by her side wanders off as you do. She's examining a half-crumpled note between a pair of clinking skeletal hands. When you draw near, a third such hand emerges from her cloak to hover over a wand on her hip. While she's patently aware of your presence, she pays you no heed.)~
 @201= ~Well met. Is this—~
 @202= ~Are you a bonafide—~
-@203= ~Hi. ...Hi.~
+@203= ~Hi. ...Hi.~ [vvVALKg]
 @204= ~(Show her the note.) Did you slip this into my pocket?~
 @205= ~(Attack.) Befoul this land no more, creature!~
 @206= ~No. I had someone else do it.~
@@ -217,7 +217,7 @@ While her awkwardness is unabating, it seems to me Valkrana's been looking out f
 @348= ~Earlier, you mentioned something along the lines of viewing our magicks and adventures from afar.~
 @349= ~Good talk, but it's time we return to an adventure of our own.  (Leave.)~
 
-@350= ~Yes.~
+@350= ~Yes.~ [vvVA0341]
 @351= ~What did you mean by that?~
 @352= ~We share a telepathic link. Otherwise, I would have trouble performing my role while separated.~
 @353= ~You mean to tell me she's always watching?~

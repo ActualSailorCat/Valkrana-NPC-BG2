@@ -1,10 +1,29 @@
 BACKUP ~Valkrana/Backup~
 AUTHOR ~Sailor Cat (a.sailor.cat@gmail.com)~
 VERSION ~v1.0~
+
+//////////////////////////////////////////////
+// Enhanced Edition Trilogy Stuff
+ALWAYS
+  ACTION_IF NOT VARIABLE_IS_SET bg2_chapter THEN BEGIN
+    ACTION_IF (GAME_IS ~eet~) BEGIN
+      OUTER_SET bg2_chapter = 12
+    END ELSE BEGIN
+      OUTER_SET bg2_chapter = 0
+    END
+    OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+      OUTER_SET bg2_chapter = bg2_chapter + 1
+      OUTER_SPRINT name_source ~bg2_chapter_%i%~
+      OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+    END
+  END
+END
+
+//////////////////////////////////////////////
 LANGUAGE
     ~English~
-    ~English~
-    ~Valkrana/English/vvloc.tra~
+    ~english~
+    ~Valkrana/Loc/English/vvloc.tra~
 
 //////////////////////////////////////////////
 BEGIN @1
@@ -64,7 +83,11 @@ WRITE_ASCII 0x003c ~vvVALKL~     // Profile Portrait
 
 COPY "Valkrana\Portrait" "override"
 
-COMPILE "Valkrana\Dialogue"
+COMPILE EVALUATE_BUFFER 
+        "Valkrana\Dialogue\vvVALK.d"
+        "Valkrana\Dialogue\vvVALKD.d"
+        "Valkrana\Dialogue\vvVALKJ.d"
+        "Valkrana\Dialogue\vvVALKP.d"
         "Valkrana\Scripts\vvVALK.baf"
         "Valkrana\Scripts\vvVALKF.baf"
         "Valkrana\Scripts\vvVALKAI.baf"
@@ -87,7 +110,7 @@ UNLESS ~SKELETON~
 OUTER_SET ai_name = RESOLVE_STR_REF(@2)
 OUTER_SET ai_desc = RESOLVE_STR_REF(@2)
 APPEND ~scrpdesc.2DA~ ~vvVALKAI %ai_name% %ai_desc%~
-COMPILE "Valkrana\Scripts\vvVALKAI.baf"
+COMPILE EVALUATE_BUFFER "Valkrana\Scripts\vvVALKAI.baf"
 COPY ~override\vvVALKAI.bcs~ ~scripts\vvVALKAI.bs~
 
 // Spawn
@@ -103,73 +126,79 @@ EXTEND_TOP ~MAGE18Z.bcs~ ~Valkrana\Scripts\vvZALLA.baf~
 EXTEND_TOP ~DRAGBLAC.bcs~ ~Valkrana\Scripts\vvDGBLC.baf~
 
 //////////////////////////////////////////////
-// Throne of Bhaal and BG2:EE Check
+// Throne of Bhaal Check
 ACTION_IF FILE_EXISTS_IN_GAME ~mel01.cre~ THEN BEGIN
-COPY "Valkrana\CRE\vvValk25.cre" "override"
-SAY NAME1 @2
-SAY NAME2 @2
-SAY BIO @3
-SAY MORALE @4
-SAY HAPPY @5
-SAY UNHAPPY_ANNOYED @6
-SAY UNHAPPY_SERIOUS @7
-SAY UNHAPPY_BREAKING @8
-SAY INITIAL_MEETING @9
-SAY BATTLE_CRY1 @10
-SAY LEADER @11
-SAY TIRED @12
-SAY BORED @13
-SAY HURT @14
-SAY SELECT_COMMON1 @15
-SAY SELECT_COMMON2 @16
-SAY SELECT_COMMON3 @17
-SAY SELECT_ACTION1 @18
-SAY SELECT_ACTION2 @19
-SAY SELECT_ACTION3 @20
-SAY DAMAGE @21
-SAY DYING @22
-SAY AREA_FOREST @23
-SAY AREA_CITY @24
-SAY AREA_DUNGEON @25
-SAY AREA_DAY @26
-SAY AREA_NIGHT @27
-SAY SELECT_ACTION4 @28
-SAY SELECT_ACTION5 @29
-SAY SELECT_ACTION6 @30
-SAY SELECT_ACTION7 @31
-SAY REACT_TO_DIE_GENERAL @32
-SAY SELECT_RARE1 @33
-SAY SELECT_RARE2 @34
-SAY CRITICAL_HIT @35
-SAY SELECT_COMMON4 @36
-SAY CRITICAL_MISS @37
-SAY TARGET_IMMUNE @38
-SAY INVENTORY_FULL @39
-SAY SPELL_DISRUPTED @42
-SAY BATTLE_CRY2 @44
-SAY BATTLE_CRY3 @45
-//SAY SELECT_RARE5 @45
-//SAY SELECT_RARE6 @42
-WRITE_ASCII 0x0034 ~vvVALKM~    // Party Portrait
-WRITE_ASCII 0x003c ~vvVALKL~    // Profile Portrait
-WRITE_ASCII 0x2cc ~vvVALK25~    // ToB Greeting
-WRITE_ASCII 0x280 ~vvVALK~      // Death Variable
-WRITE_ASCII 0x248 ~vvVAL25S~    // Override Script
+  COPY "Valkrana\CRE\vvValk25.cre" "override"
+  SAY NAME1 @2
+  SAY NAME2 @2
+  SAY BIO @3
+  SAY MORALE @4
+  SAY HAPPY @5
+  SAY UNHAPPY_ANNOYED @6
+  SAY UNHAPPY_SERIOUS @7
+  SAY UNHAPPY_BREAKING @8
+  SAY INITIAL_MEETING @9
+  SAY BATTLE_CRY1 @10
+  SAY LEADER @11
+  SAY TIRED @12
+  SAY BORED @13
+  SAY HURT @14
+  SAY SELECT_COMMON1 @15
+  SAY SELECT_COMMON2 @16
+  SAY SELECT_COMMON3 @17
+  SAY SELECT_ACTION1 @18
+  SAY SELECT_ACTION2 @19
+  SAY SELECT_ACTION3 @20
+  SAY DAMAGE @21
+  SAY DYING @22
+  SAY AREA_FOREST @23
+  SAY AREA_CITY @24
+  SAY AREA_DUNGEON @25
+  SAY AREA_DAY @26
+  SAY AREA_NIGHT @27
+  SAY SELECT_ACTION4 @28
+  SAY SELECT_ACTION5 @29
+  SAY SELECT_ACTION6 @30
+  SAY SELECT_ACTION7 @31
+  SAY REACT_TO_DIE_GENERAL @32
+  SAY SELECT_RARE1 @33
+  SAY SELECT_RARE2 @34
+  SAY CRITICAL_HIT @35
+  SAY SELECT_COMMON4 @36
+  SAY CRITICAL_MISS @37
+  SAY TARGET_IMMUNE @38
+  SAY INVENTORY_FULL @39
+  SAY SPELL_DISRUPTED @42
+  SAY BATTLE_CRY2 @44
+  SAY BATTLE_CRY3 @45
+  //SAY SELECT_RARE5 @45
+  //SAY SELECT_RARE6 @42
+  WRITE_ASCII 0x0034 ~vvVALKM~    // Party Portrait
+  WRITE_ASCII 0x003c ~vvVALKL~    // Profile Portrait
+  WRITE_ASCII 0x2cc ~vvVALK25~    // ToB Greeting
+  WRITE_ASCII 0x280 ~vvVALK~      // Death Variable
+  WRITE_ASCII 0x248 ~vvVAL25S~    // Override Script
 
-COMPILE "Valkrana\Scripts\vvVAL25S.baf"
-COPY "Valkrana\Portrait\EE" "override"
-// Journal Entries. Message, Companion Quest
-ADD_JOURNAL @125 @126
-ADD_JOURNAL @127 @128 @129 @130 @131 @132 @133 @134
-END 
+  COMPILE EVALUATE_BUFFER 
+        "Valkrana\Dialogue\vvVALK25.d"
+        "Valkrana\Dialogue\vvVAL25D.d"
+        "Valkrana\Dialogue\vvVAL25J.d"
+        "Valkrana\Dialogue\vvVAL25P.d"
+        "Valkrana\Scripts\vvVAL25S.baf"
 
+  ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
+    COPY "Valkrana\Portrait\EE" "override"
+    ADD_JOURNAL @125 @126 // Message
+    ADD_JOURNAL @127 @128 @129 @130 @131 @132 @133 @134 // Companion Quest
+  END
+END
 // Throne of Bhaal Stop
 //////////////////////////////////////////////
 // Urchin Stuff
 COPY "Valkrana\CRE\vvURCH01.cre" "override"
 SAY NAME1 @98
 SAY NAME2 @98
-COMPILE "Valkrana\Scripts\vvURCH.baf"
+COMPILE EVALUATE_BUFFER "Valkrana\Scripts\vvURCH.baf"
 //////////////////////////////////////////////
 
 APPEND ~Pdialog.2da~
@@ -184,3 +213,26 @@ IF ~25POST~
 
 APPEND ~Interdia.2da~ ~vvVALK~
 UNLESS ~vvVALK~
+
+//////////////////////////////////////////////
+// More Enhanced Edition Trilogy Stuff
+ACTION_IF GAME_IS ~eet~ BEGIN
+  INCLUDE ~EET/other/EET_functions.tph~
+  LAF ~EET_NPC_TRANSITION~
+    INT_VAR
+      type = 2
+      default_ToB = 1
+    STR_VAR
+      dv = "vvVALK"
+      override_SoA = "vvVALK"
+      override_ToB = "vvVALK"
+      dialog_ToB = "vvVALK25"
+      cre_ToB = "vvVALK25"
+      traFile = EVAL "Valkrana/Loc/%LANGUAGE%/vvloc.tra"
+      string = "@905"
+      stringPosDV = "Valygar"
+      SummonedVar = "vvVALKSummoned"
+  END
+END ELSE BEGIN
+  COMPILE ~Valkrana/Dialogue/FATESP.d~
+END
