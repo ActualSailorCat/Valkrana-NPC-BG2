@@ -1,0 +1,186 @@
+BACKUP ~Valkrana/Backup~
+AUTHOR ~Sailor Cat (a.sailor.cat@gmail.com)~
+VERSION ~v1.0~
+LANGUAGE
+    ~English~
+    ~English~
+    ~Valkrana/English/vvloc.tra~
+
+//////////////////////////////////////////////
+BEGIN @1
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+//////////////////////////////////////////////
+// Base Game
+COPY "Valkrana\CRE\vvVALK.cre" "override"
+SAY NAME1 @2
+SAY NAME2 @2
+SAY BIO @3
+SAY MORALE @4
+SAY HAPPY @5
+SAY UNHAPPY_ANNOYED @6
+SAY UNHAPPY_SERIOUS @7
+SAY UNHAPPY_BREAKING @8
+SAY INITIAL_MEETING @9
+SAY BATTLE_CRY1 @10
+SAY LEADER @11
+SAY TIRED @12
+SAY BORED @13
+SAY HURT @14
+SAY SELECT_COMMON1 @15
+SAY SELECT_COMMON2 @16
+SAY SELECT_COMMON3 @17
+SAY SELECT_ACTION1 @18
+SAY SELECT_ACTION2 @19
+SAY SELECT_ACTION3 @20
+SAY DAMAGE @21
+SAY DYING @22
+SAY AREA_FOREST @23
+SAY AREA_CITY @24
+SAY AREA_DUNGEON @25
+SAY AREA_DAY @26
+SAY AREA_NIGHT @27
+SAY SELECT_ACTION4 @28
+SAY SELECT_ACTION5 @29
+SAY SELECT_ACTION6 @30
+SAY SELECT_ACTION7 @31
+SAY REACT_TO_DIE_GENERAL @32
+SAY SELECT_RARE1 @33
+SAY SELECT_RARE2 @34
+SAY CRITICAL_HIT @35
+SAY SELECT_COMMON4 @36
+SAY CRITICAL_MISS @37
+SAY TARGET_IMMUNE @38
+SAY INVENTORY_FULL @39
+SAY SPELL_DISRUPTED @42
+SAY BATTLE_CRY2 @44
+SAY BATTLE_CRY3 @45
+WRITE_ASCII SCRIPT_OVERRIDE ~vvVALK~
+WRITE_ASCII DIALOG ~vvVALK~
+WRITE_ASCII 0x280 ~vvVALK~
+WRITE_ASCII 0x0034 ~vvVALKS~     // Party Portrait
+WRITE_ASCII 0x003c ~vvVALKL~     // Profile Portrait
+
+COPY "Valkrana\Portrait" "override"
+
+COMPILE "Valkrana\Dialogue"
+        "Valkrana\Scripts\vvVALK.baf"
+        "Valkrana\Scripts\vvVALKF.baf"
+        "Valkrana\Scripts\vvVALKAI.baf"
+
+// Audio
+LAF HANDLE_AUDIO
+  STR_VAR
+    audio_path = ~Valkrana/Voice~
+    oggdec_path = ~Valkrana/Voice~
+    sox_path = ~Valkrana/Voice~
+END
+
+// Giving the skeleton race a name.
+OUTER_SET ske_lcase = RESOLVE_STR_REF(@96)
+OUTER_SET ske_ucase = RESOLVE_STR_REF(@95)
+APPEND ~racetext.2da~ ~SKELETON 115 %ske_lcase% -1  %ske_ucase% -1~
+UNLESS ~SKELETON~
+
+// AI
+OUTER_SET ai_name = RESOLVE_STR_REF(@2)
+OUTER_SET ai_desc = RESOLVE_STR_REF(@2)
+APPEND ~scrpdesc.2DA~ ~vvVALKAI %ai_name% %ai_desc%~
+COMPILE "Valkrana\Scripts\vvVALKAI.baf"
+COPY ~override\vvVALKAI.bcs~ ~scripts\vvVALKAI.bs~
+
+// Spawn
+EXTEND_TOP ~AR0400.bcs~ ~Valkrana\Scripts\vvVALKS.baf~
+// Invitation Letters
+EXTEND_TOP ~AR0020.bcs~ ~Valkrana\Scripts\vvVALKN.baf~
+EXTEND_TOP ~AR0300.bcs~ ~Valkrana\Scripts\vvVALKN.baf~
+EXTEND_TOP ~AR0500.bcs~ ~Valkrana\Scripts\vvVALKN.baf~
+EXTEND_TOP ~AR0800.bcs~ ~Valkrana\Scripts\vvVALKN.baf~
+EXTEND_TOP ~AR0900.bcs~ ~Valkrana\Scripts\vvVALKN.baf~
+// Specific Kills - Killed() only checks killing blow. Died() doesn't work.
+EXTEND_TOP ~MAGE18Z.bcs~ ~Valkrana\Scripts\vvZALLA.baf~
+EXTEND_TOP ~DRAGBLAC.bcs~ ~Valkrana\Scripts\vvDGBLC.baf~
+
+//////////////////////////////////////////////
+// Throne of Bhaal and BG2:EE Check
+ACTION_IF FILE_EXISTS_IN_GAME ~mel01.cre~ THEN BEGIN
+COPY "Valkrana\CRE\vvValk25.cre" "override"
+SAY NAME1 @2
+SAY NAME2 @2
+SAY BIO @3
+SAY MORALE @4
+SAY HAPPY @5
+SAY UNHAPPY_ANNOYED @6
+SAY UNHAPPY_SERIOUS @7
+SAY UNHAPPY_BREAKING @8
+SAY INITIAL_MEETING @9
+SAY BATTLE_CRY1 @10
+SAY LEADER @11
+SAY TIRED @12
+SAY BORED @13
+SAY HURT @14
+SAY SELECT_COMMON1 @15
+SAY SELECT_COMMON2 @16
+SAY SELECT_COMMON3 @17
+SAY SELECT_ACTION1 @18
+SAY SELECT_ACTION2 @19
+SAY SELECT_ACTION3 @20
+SAY DAMAGE @21
+SAY DYING @22
+SAY AREA_FOREST @23
+SAY AREA_CITY @24
+SAY AREA_DUNGEON @25
+SAY AREA_DAY @26
+SAY AREA_NIGHT @27
+SAY SELECT_ACTION4 @28
+SAY SELECT_ACTION5 @29
+SAY SELECT_ACTION6 @30
+SAY SELECT_ACTION7 @31
+SAY REACT_TO_DIE_GENERAL @32
+SAY SELECT_RARE1 @33
+SAY SELECT_RARE2 @34
+SAY CRITICAL_HIT @35
+SAY SELECT_COMMON4 @36
+SAY CRITICAL_MISS @37
+SAY TARGET_IMMUNE @38
+SAY INVENTORY_FULL @39
+SAY SPELL_DISRUPTED @42
+SAY BATTLE_CRY2 @44
+SAY BATTLE_CRY3 @45
+//SAY SELECT_RARE5 @45
+//SAY SELECT_RARE6 @42
+WRITE_ASCII 0x0034 ~vvVALKM~    // Party Portrait
+WRITE_ASCII 0x003c ~vvVALKL~    // Profile Portrait
+WRITE_ASCII 0x2cc ~vvVALK25~    // ToB Greeting
+WRITE_ASCII 0x280 ~vvVALK~      // Death Variable
+WRITE_ASCII 0x248 ~vvVAL25S~    // Override Script
+
+COMPILE "Valkrana\Scripts\vvVAL25S.baf"
+COPY "Valkrana\Portrait\EE" "override"
+// Journal Entries. Message, Companion Quest
+ADD_JOURNAL @125 @126
+ADD_JOURNAL @127 @128 @129 @130 @131 @132 @133 @134
+END 
+
+// Throne of Bhaal Stop
+//////////////////////////////////////////////
+// Urchin Stuff
+COPY "Valkrana\CRE\vvURCH01.cre" "override"
+SAY NAME1 @98
+SAY NAME2 @98
+COMPILE "Valkrana\Scripts\vvURCH.baf"
+//////////////////////////////////////////////
+
+APPEND ~Pdialog.2da~
+~vvVALK vvVALKP vvVALKJ~
+UNLESS ~vvVALK~
+UNLESS ~25POST~
+
+APPEND ~Pdialog.2da~
+~vvVALK vvVALKP vvVALKJ NONE vvVAL25P vvVAL25J NONE vvVALK25~
+UNLESS ~vvVALK~
+IF ~25POST~
+
+APPEND ~Interdia.2da~ ~vvVALK~
+UNLESS ~vvVALK~

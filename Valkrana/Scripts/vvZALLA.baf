@@ -1,0 +1,8 @@
+// Zallanora MAGE18Z
+IF  Die()
+    //InParty("vvVALK")
+THEN
+    RESPONSE #100
+        SetGlobal("vvVALKZallanoraDead","GLOBAL",1)
+        Continue()
+END

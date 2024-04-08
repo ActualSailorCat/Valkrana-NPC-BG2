@@ -1,0 +1,10 @@
+// To display invitation text in areas prior to meeting.
+IF  Global("vvVALKMet","GLOBAL",0)
+    Global("vvVALKNote","GLOBAL",0)
+    THEN
+    RESPONSE #100
+        DisplayStringHead(Myself,@199)
+        SetGlobal("vvVALKNote","GLOBAL",1)
+        AddJournalEntry(@125,QUEST)
+        Continue()
+END

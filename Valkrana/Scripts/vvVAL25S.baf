@@ -1,0 +1,8 @@
+// Summoned
+IF
+    Global("vvVALKSummoned","GLOBAL",1)
+THEN
+    RESPONSE #100
+    StartDialogueNoSet(Player1)
+    Wait(1)
+END

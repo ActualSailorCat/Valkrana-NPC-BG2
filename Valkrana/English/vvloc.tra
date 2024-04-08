@@ -1,0 +1,457 @@
+//////////////////////////////////////////////
+// Add integer gaps between dialogue blocks so I don't need to cascade +1 everything if I need to add something after the fact.
+
+@1=~Valkrana Companion NPC Mod for BG2EE~
+@2=~Valkrana~
+@3=~When asked about her past, VALKRANA speaks with gusto unusual to the skeleton about her service to and relationship with the great, mighty, unrivaled witch Ilyana Miraquinal. Until Ilyana, Valkrana was unfinished, incomplete. With a kiss, Ilyana brought out the best in her, filled a hole in Valkrana purpose-dug for lifelong obsession. What followed was adventure after adventure, travails shared as companions to further the renown of the hero Ilyana. Many of which, you're treated to in great detail. Currently, Valkrana serves as Ilyana's envoy in this corner of Realmspace.
+
+Valkrana strikes an odd balance between a child's awkward bearing and the keen edge of an undead mastermind. Painfully out of her element in conversation, her selective filter and curt replies give the impression of a contempt that isn't there. Usually. In the city, there always seems to be an urchin within her line of sight.~
+
+//////////////////////////////////////////////
+// Begin voice lines.
+@4= ~I cannot die here.~ [vvVA0004] // MORALE
+@5= ~You lead well. Not nearly as well as Ilyana, but well enough.~ [vvVA0005] // HAPPY
+@6= ~Your heroics are noteworthy, if only within this limited theatre. Still, a pat on the head is in order.~ // UNHAPPY_ANNOYED She doesn't actually mind those with great reputation, but TN gets annoyed.
+@7= ~Your misdeeds threaten Ilyana's reputation. Change course, or I will be forced to leave. Or worse.~ [vvVA0007] // UNHAPPY_SERIOUS
+@8= ~As right hand to Ilyana Miraquinal, I can no longer tolerate your company. Continue this path, and you may find there are worse enemies than Jon Irenicus. Bye.~ [vvVA0008] // UNHAPPY_BREAKING
+@9= ~I am Valkrana Miraquinal. Right hand and biggest fan of the great, mighty, unrivaled witch Ilyana Miraquinal.~ [vvVALKim]
+@10= ~Your bones, or your life.~ [vvVALKa] // BATTLE_CRY1
+@11= ~I am better-suited to the role of right hand. But, very well.~ [vvVALKb] // LEADER
+@12= ~I must replenish my spells.~ [vvVALKc] // TIRED
+@13= ~A thousand tasks need doing, and yet we tarry.~ [vvVALKd] // BORED
+@14= ~I am... not in a good way.~ [vvVALKe] // HURT
+@15= ~What?~ [vvVALKf] // SELECT_COMMON1
+@16= ~Hi. ...Hi.~ [vvVALKg] // SELECT_COMMON2
+@17= ~Intel is the most valuable commodity.~ [vvVALKh] // SELECT_COMMON3
+@18= ~'Kay.~ [vvVALKi] // SELECT_ACTION1
+@19= ~With discretion.~ [vvVALKj] // SELECT_ACTION2
+@20= ~Why?~ [vvVALKk] // SELECT_ACTION3
+@21= ~Agh.~ [vvVALKl] // DAMAGE
+@22= ~Ah-ah-aaaaaah!~ [vvVALKm] // DYING
+@23= ~Day before yesterday I saw Ilyana, and yesterday you, and today, a deer.~ [vvVALKn] // AREA_FOREST
+@24= ~Backalleys, warehouses, hidden bunkers... the city is where the figurative magic happens.~ [vvVALKo] // AREA_CITY
+@25= ~Imagine all the lost arcana we might discover here.~ [vvVALKp] // AREA_DUNGEON
+@26= ~Urchins go unnoticed even in broad daylight.~ [vvVALKq] // AREA_DAY
+@27= ~I wish I were astride Ilyana's broom, her hair in my face, soaring across Selûne.~ [vvVALKr] // AREA_NIGHT
+@28= ~Skeletons are cute because of the way they are.~ [vvVALKs] // SELECT_ACTION4
+@29= ~Pale before the right hand of the great, mighty, unrivaled witch, Ilyana Miraquinal.~ [vvVALKt] // SELECT_ACTION5
+@30= ~I am prepared.~ [vvVALKu] // SELECT_ACTION6
+@31= ~Let us finish this.~ [vvVALKv] // SELECT_ACTION7
+@32= ~You are stupid, and you have left a stupid corpse.~ [vvVALKw] // REACT_TO_DIE_GENERAL
+@33= ~All according to plan.~ [vvVALKx] // SELECT_RARE1 (Actually ACTION_RARE)
+@34= ~Rise... and shine.~ [vvVALKy] // SELECT_RARE2
+@35= ~Did you see that, my darling?~ [vvVALKz] // CRITICAL_HIT
+@36= ~Vita Mortis Care—Oh, what?~ [vvVALK0] // SELECT_COMMON4
+@37= ~Well, you miss one-hundred percent of the spells you do not cast.~ [vvVALK1] // CRITICAL_MISS
+@38= ~Blasted thing is immune.~ [vvVALK2] // TARGET_IMMUNE
+@39= ~I am not a pack skeleton.~ [vvVALK3] // INVENTORY_FULL
+@40= ~Lint obtained.~ [vvVALK4] // PICKED_POCKET
+@41= ~The shadows contain strange and terrible things... and they are my darling's me.~ [vvVALK5] // HIDDEN_IN_SHADOWS
+@42= ~No... My spell...~ [vvVALK6] // SPELL_DISRUPTED
+@43= ~Now, we wait.~ [vvVALK7] // SET_A_TRAP
+@44= ~Come get some.~ [vvVALK8] // BATTLE_CRY2
+@45= ~For Ilyana.~ [vvVALK9] // BATTLE_CRY3 Unused Alt: I have found myself some new skeletons
+//@60 = ~Enough.~ [vvVALK0_] // Nagged Select
+//@61 = ~selection sound, rare 6 (used as nagged action response in BG2)~ [bob1_]
+//@62 = ~selection sound, rare 7 (used as nagged action response in BG2)~ [bob2_]
+//@63 = ~selection sound, rare 8 (used as nagged action response in BG2)~ [bob3_]
+@95= ~Skeleton~
+@96= ~skeleton~
+@97= ~'Kay.~ [vvVALKi] // Added static ref because it's used so often.
+@98= ~Urchin~
+@99= ~Female: Valkrana~
+
+//////////////////////////////////////////////
+// Journal Entries
+
+// Received invitation.
+@125= ~A Clandestine Message
+
+An urchin's grubby fingers have done the implausible: fattened my pouch. The note, written in a measured hand on crumpled and dirtied parchment, suggests a meeting with a character known only as 'V'. Should I choose to investigate, this 'enemy of an enemy' can be found above the Copper Coronet.~
+
+// First Meet - Attacked
+@126= ~Skeletal Skirmish
+
+An urchin's grubby fingers have done the implausible: fattened my pouch. The note, written in a measured hand on crumpled and dirtied parchment, suggests a meeting with a character known only as 'V'. Should I choose to investigate, this 'enemy of an enemy' can be found above the Copper Coronet.
+
+
+Having arrived in the slums, I sought out this 'V', which led me to a nightwalker of the skeletal persuasion. I afforded the wretch no more than a fumbled greeting. Our short-lived battle ended with its escape. I had better watch my back.~
+
+// Joined Party.
+@127= ~Bones Alive!
+
+An urchin's grubby fingers have done the implausible: fattened my pouch. The note, written in a measured hand on crumpled and dirtied parchment, suggests a meeting with a character known only as 'V'. Should I choose to investigate, this 'enemy of an enemy' can be found above the Copper Coronet.
+
+
+Having arrived in the slums, I sought out this 'V', which led me to a nightwalker of the skeletal persuasion. Awkward though she was, she was sentient and exhibited full control of her faculties. This Valkrana proposed an alliance against the blasted Cowled Wizards that enforce Athkatla's anti-magic laws, and more importantly, kidnapped Imoen. Due to some trepidation on my part, I've decided to stow this alliance. For now.~
+
+// Met, but didn't invite to party.
+@128= ~Bones Alive!
+
+An urchin's grubby fingers have done the implausible: fattened my pouch. The note, written in a measured hand on crumpled and dirtied parchment, suggests a meeting with a character known only as 'V'. Should I choose to investigate, this 'enemy of an enemy' can be found above the Copper Coronet.
+
+
+Having arrived in the slums, I sought out this 'V', which led me to a nightwalker of the skeletal persuasion. Awkward though she was, she was sentient and exhibited full control of her faculties. This Valkrana proposed an alliance against the blasted Cowled Wizards that enforce Athkatla's anti-magic laws, and more importantly, kidnapped Imoen. I have found myself a tireless ally.~
+
+// Zallanora intel.
+@129= ~Bones Alive!
+
+According to Valkrana's intel, a high-ranking mage by the name of Zallanora may be instrumental to checking the Cowled Wizards. There must be some way to draw her out. I shouldn't be overzealous, though, as Valkrana cautioned that she is more than meets the eye.~
+
+// Milestone 1
+@130= ~Bones Alive!
+
+A rare discussion with Valkrana has given me some insight into her fascination with magicks and magic items. Chiefly, that magic is more than her craft; it is dear to her. She finds such untrammeled joy in experiencing magick that one could mistake her for a child, but I would do well to remember that her childlike mannerisms belie a calculating mind. Still, I think I could draw out more of these conversations if we continue to find magic items.~
+
+// Milestone 2
+@131= ~Bones Alive!
+
+Valkrana never misses an opportunity to extol her darling, the great, might, unrivaled witch Ilyana Miraquinal. Today was no exception. Yet this occasion exhumed a heretofore invisible circumstance: their telepathic link. Evidently, they can communitate thoughts, sight, and sound. To be secretly surveilled is disconcerting, but Valkrana assures me it's for her benefit, which is believeable at least given her disposition. That aside, I learned that Ilyana likes to make Valkrana wear a maid outfit. Find more magic items, resist the Cowled Wizards, and surely Valkrana will reveal more.~
+
+// Milestone 3
+@132= ~Bones Alive!
+
+In what must be the closest an outsider such as myself can get to Valkrana, she was willing to divulge information on not just her past, but also, her true mission. As is natural for a skeleton who maintains that 'intel is the most valuable commodity', she kept many cards close to her chest. Even so, she disclosed the part of her mission that concerns scouting turning points in which adventurers such as myself are forged. Ilyana holds some vested interests in our progress. What exactly, Valkrana could not reveal. Nevertheless, I realize I've earned my right to this privileged knowledge.
+
+
+Our discussion also visited her undeath, a detached topic for her part. Valkrana must have suffered greatly before her undeath, thanks to her unbalanced soul. I don't know whether I agree with the sentiment, but others might venture as far as to argue her undeath was a blessing to a tortured child robbed of life. To think she's half dragon. Maybe I can draw more out of her later.~
+
+// Zallanora defeated.
+@133= ~Bones Alive!
+
+After a fierce battle, we've triumphed over the wizard Zallanora and her Cowled Enforcer lackeys. In striking this blow, Valkrana assures me that the Cowled Wizards will trouble us no further as an organization. Let the Cowed Wizards tremble before us.~
+
+// Complete
+@134= ~Bones Alive!
+
+While her awkwardness is unabating, it seems to me Valkrana's been looking out for me lately. Her warning against unnecessary risk might have been her first voiced sentiment, but an adventurer can tell when someone has their back. Valkrana has mine. I say this with confidence. She's mightily abrasive, but our awkward bag of bones is one of us. Together, we've faced down the Cowled Wizards, cleared dungeons, and marveled at magicks galore. For her sake, may she return to Ilyana soon. But until such a time comes, she's ours.~
+
+//////////////////////////////////////////////
+// Initial meet and surrounding initial dialogue trees.
+@199= ~(You notice the shift in your pouch's contents too late to catch the pickpocket. Fortunately, nothing's missing. Instead, you discover a dirty note that reads, "Slums. Above Copper Coronet. Enemy of an enemy. — V")~
+@200= ~(You approach a short figure in a wide-brimmed wizard hat, and the urchin by her side wanders off as you do. She's examining a half-crumpled note between a pair of clinking skeletal hands. When you draw near, a third such hand emerges from her cloak to hover over a wand on her hip. While she's patently aware of your presence, she pays you no heed.)~
+@201= ~Well met. Is this—~
+@202= ~Are you a bonafide—~
+@203= ~Hi. ...Hi.~
+@204= ~(Show her the note.) Did you slip this into my pocket?~
+@205= ~(Attack.) Befoul this land no more, creature!~
+@206= ~No. I had someone else do it.~
+@207= ~I am Valkrana, right hand and biggest fan of the great, mighty, unrivaled witch Ilyana Miraquinal. You, <CHARNAME>, are an enemy of my enemy.~
+@208= ~You'll have to be more specific. Everyone's clamouring to be my enemy.~
+@209= ~You're... openly undead?~
+@210= ~Right. Who are you?~
+@211= ~The Cowled Wizards. Middling spellcasters whose only real power is authority. Normally, I would not care, but their stranglehold on magic is troublesome.~
+@212= ~Why not join me? We should combine our efforts against the Cowled Wizards.~
+@213= ~Yeah, they're a real piece of work.~
+@214= ~'Kay.~ [vvVALKi]
+@215= ~...'Kay.~ [vvVALKi]
+@216= ~...Few can see through my darling's suggestions.
+
+...Unlike mortals, I am in control of my base instincts.~
+@217= ~That's reassuring. Surely, you understand my concern.~
+@218= ~Just yesterday, I ate three roast boars in one sitting.~
+@219= ~I'm not sure I trust you. I'll be going now.~
+@220= ~"Hi. ...Hi."~
+@221= ~~
+@222= ~Why not join me? We should combine our efforts against the Cowled Wizards.~
+@223= ~'Kay.~ [vvVALKi]
+
+//////////////////////////////////////////////
+// Kicking from and rejoining party.
+@250= ~'Kay. Bye.~
+@251= ~On second thought, your intel network is an asset to the party.~
+@252= ~You're too awkward for my bones. Another time, perhaps.~
+@253= ~You were right. You're the smartest person I'll ever meet. Let's party up.~
+@254= ~Never mind.~
+
+//////////////////////////////////////////////
+// Magic Item Milestones
+// 1 Magic Items
+@300= ~I am here on a mission. That, I have not forgotten. Be that as it may, adventuring so often brings a steady flow of new and fascinating arcana. I like that it does.~
+@301= ~You're usually the very image of apathy, so your enthusiasm caught me by surprise when we first stumbled upon a magic item.~
+@302= ~We can't stop by Waukeen's Promenade without you spending an hour in the Adventurer's Mart. Gods know you don't need to go adventuring to find magic items.~
+@303= ~That is what I said.~
+@304= ~I enjoy browsing. Rarely, one might discover new stock, or something that had been overlooked in a dark cranny. But one is not the other.~
+@305= ~Magic-obsessed wizards are as common as they come, but yours has a glimmer of fascination.~
+@306= ~We wizards are magic-obsessed by nature. Yours, however, has a glimmer of fascination.~
+@307= ~Magic is... more than my craft. Magic salvaged my soul. Magic is warm memories shared with Papa. (Her boney fingers clink in quiet consideration.)~
+@308= ~Magic is my key. It is how I unlock a world with which my interactions have always fallen short.~
+@309= ~It's clearly very dear to you. Let's look forward to future magic encounters, then.~
+@310= ~I see. Maybe we'll happen upon a flying necromantic whale.~
+@311= ~...'Kay.~ [vvVALKi]
+@312= ~...Maybe.~
+@313= ~Well, what do you suppose we'll find next?~
+@314= ~I have seen things you people would not believe. Dragonstorms on fire in the skies of interdimensional fortress Citadella Ilyana. The eldritch escalator that haunts my demiplanes. Skeletons jettisoned from geysers.~
+@315= ~Eldritch wh—~
+@316= ~That's—~
+@317= ~This one time I drew a card from the Deck of Many Bones. And do you know what card I drew? I drew the Skeleton Conservation Zone. Half the city's population became skeletons; half its architecture, skeletal. And not a single person complained. Bones alive, what arcane wonders.~
+@318= ~Now wait just a—~
+@319= ~And this one time...~
+@320= ~(Listen.)~
+
+// 2 Ilyana
+@325= ~Would that Ilyana were here to share in these magicks and adventures. It is not enough to merely view them from afar.~
+// Where is she while you're here blah blah blah?
+@326= ~Ah, yes. The great, mighty, unrivaled witch. You may have mentioned her.~
+@327= ~'Merely view them from afar'?~
+@328= ~I have.~
+@329= ~My darling is incredible. She has led adventure after adventure after adventure. She is the Master of Adventures at multiple guilds on multiple worlds, and is known among adventurers for both her feats and as a patroness. And, and clinging to her tightly as she tangles with a dragon, casting fireballs and psionic strikes from her broom. Bones alive, that is a gripping experience. Every time!~
+@330= ~This one time, during our journey across the Abyss, we were waylaid by a devourer, one sinister servant of Orcus. With absolute command, my darling wedged a psychic lance so deep within its mind as to render it utterly debilitated. All that was left for the rest of us was to execute the fiend like so much wind.~
+@331= ~Surely, this is all sorts of exaggerated. You are her envoy, after all.~
+@332= ~You really enjoy being along for the ride during something so harrowing? Never mind life-threatening.~
+@333= ~My perception may be colored, but I am not her bard; I do not exaggerate. Besides, she forbade it.~
+@334= ~Lots and lots.~
+@335= ~Got any normal memories in that skull? These threads of yours weave a heroic tapestry, but make her less relatable.~
+@336= ~Normal? Ilyana is extraordinary.~
+@337= ~You speak always of her feats, but there's more to us than our greatest moments. Even heroes have downtime. The everyday.~
+@338= ~Oh. Well, it is her preference that I wear a maid outfit during homemaking duties, and sometimes when performing other tasks.~
+@339= ~Not quite what I was getting at. You shouldn't be so forthcoming with information best left behind closed doors.~
+@340= ~She has you slip into a maid outfit? You?~
+@341= ~Yes.~
+@342= ~I have a firm grasp on what is and is not confidential, or even top secret, intel. I cannot say the same for 'normal'.~
+@343= ~Still, that was choice, in a way. Incisive in cutting through the grandeur to make her appear more down to earth.~
+@344= ~Down to earth... Ilyana is partial to earthy foods. Sautéed mushrooms, baked parsnips, and roasted yams all appeal to her palate. Just recently, shiitake glazed with kiwi reduced to a sauce.~
+@345= ~And she finds mirth in even my most miserable attempts at puns.~
+@346= ~You lay the heroism on thick. Consider breaking it up every now and then with anecdotes such as these.~
+@347= ~Thank you for indulging me. And don't get the wrong impression. Death hangs close to adventurers; tales of success are a beacon of hope among our kind.~
+@348= ~Earlier, you mentioned something along the lines of viewing our magicks and adventures from afar.~
+@349= ~Good talk, but it's time we return to an adventure of our own.  (Leave.)~
+
+@350= ~Yes.~
+@351= ~What did you mean by that?~
+@352= ~We share a telepathic link. Otherwise, I would have trouble performing my role while separated.~
+@353= ~You mean to tell me she's always watching?~
+@354= ~And hearing.~
+@355= ~I'm not sure how to take that. I wasn't aware you had someone looking over your shoulder at all times.~
+@356= ~I suppose you are her subordinate. It's only circumspect to keep tabs on your minions.~
+@357= ~The link exists for my benefit more than hers. These far-flung missions would prove impossible for my darling's me if I could not share in her senses. Even with the connection, I struggle.~
+@358= ~You often refer to yourself as 'my darling's me'. It makes you sound like a possession.~
+@359= ~You're an odd one, Valkrana. I can't relate to the need to have someone under constant surveillance.~
+@360= ~I am odd. Ilyana accepts as much. The telepathic link is her doing, not mine.~
+@361= ~I am hers. As centuries pass and worlds change, as people enter and exit her life, I will be her constant.~
+
+// 3 Valkrana Stuff + Mission
+@362= ~It is better to be circumspect than lose your life. There are always other magicks and other adventures.~
+@363= ~You speak the truth, Valkrana. Glory is meaningless if we aren't around to reap the rewards.~
+@364= ~That line of thinking won't get you into Valhalla. The bards don't sing about cowards, Valkrana.~
+@365= ~Is that a hint of concern I'm detecting, buried deep within your pragmatism?~
+@366= ~Your untimely end would be a detriment to my mission.~
+@367= ~Being that you're undead, you've already met your untimely end. What happened?~
+@368= ~This isn't the first time you've mentioned a mission. Do you enjoy being cryptic, or is it privileged knowledge?~
+
+//Undeath
+@370= ~Papa's proclivity for dragons led him into the hoard of the world dragon Ssstzrazolik, which resulted in my wretched conception.~
+@371= ~You mean to tell me you're a dragon? Your appearance isn't exactly convincing.~
+@372= ~(Say nothing.)~
+@373= ~Yes. Half, and only in soul.~
+@374= ~On my homeworld, these legendary dragons were veritable demigods, intrinsically tied to the well-being of the planet. But I was born an elf. Because my soul burned white-hot with the lineage of my birth mother, my inferior elven vessel could no more contain it than whey in cheesecloth. I would have lived a short life.~
+@375= ~I see. You succumbed to your illness then.~
+@376= ~That's how it goes. The weak are bound to be trodden underfoot by the mighty. You just happened to be both.~
+@377= ~I did not. Like any other urchin, I wandered the slums, divesting corpses of skeletons. Unlike them, I—~
+@378= ~Divesting corpses of skeletons is decidedly *not* like any other urchin.~
+//~(Say nothing.)~ @372
+@379= ~Why?~
+@380= ~Because that's not normal.~
+@381= ~I do not follow.~
+@382= ~Never mind. Go on.~
+@383= ~Something is wrong with you.~
+//'Kay. @99
+@384= ~Unlike them, I was outcast for both my illness and my awkwardness. In the late stages of my condition, I sought out one of the dragons that Papa would describe with such passion. There, I perished in a backwater lair to the claw of some petty swamp dragon.~
+@385= ~Even the spriest child would have trouble finding their way into the lair of a dragon.~
+@386= ~I've got to hand it to you: you went out in style. Better that than the mewl of a deathbed.~
+@387= ~Ironic that either fate would have had you done in by a dragon.~
+@388= ~Resourceful beats hale until you are dead. What's more, Papa had a surfeit of maps, and had imparted vast knowledge of the race.~
+@389= ~Death is death. I learned to avoid it at any cost. Some souls are more equal than others.~
+@390= ~Papa had a surfeit of maps. I wished to experience what had inspired in him such wonder.~
+@391= ~And then you were reanimated. Did that not come as a shock, waking up to find you've been made undead against your will?~
+@392= ~No. This undead vessel can withstand my soul. The unabating hunger was challenging at first, but a locked trunk can hone self control.~
+@393= ~I should've known you'd be unfazed. Not a question I get to ask, well, any undead, but what's it like?~
+@394= ~What was locked in the trunk?~
+@395= ~My darling's me.~
+@396= ~That comes off as more than a little extreme.~
+@397= ~Ah, that tracks. Unabating hunger and all.~
+@398= ~Papa always did what was best for my darling's me. His reasoning was sound.~
+@399= ~What is what like?~
+@400= ~Being undead, Valkrana.~
+@401= ~Oh. What little I can recall from my time as an elf was both unpleasant and fleeting, so my point of reference is unreliable.
+
+Undeath manifests differently from creature to creature, but its tireless nature affords greater freedom to focus on Ilyana's needs. The vilification can be a hindrance, but my personality would be an obstacle even if I were not undead.~
+@402= ~That was a more practical perspective than I had hoped for, but I'm glad you're willing to share. Your history is as strange as you are, Valkrana. Now, what's this about a mission?~
+@403= ~That was insightful. You're a tough nut to crack, Valkrana, but I feel as if we've grown closer. Now, what do you say we find ourselves a dragon to slay. (Leave.)~
+
+//Mission
+@369= ~No.~
+@404= ~'No' to which exactly? Out with it, Valkrana.~
+@405= ~...I cannot divulge my every objective, but there are turning points in which adventurers are forged. To Ilyana, they glow with promise.~
+@406= ~Much like an avatar to a god, I am Ilyana's champion. As such, I am charged at times with scouting these adventurers. As of now, you have my attention, and have proven yourself worthy of a limited explanation.~
+@407= ~Ah. So your darling's keeping an eye on the competition.~
+@408= ~Your attention? Scouting? Glow with promise? You're still being as cryptic as the Lady of Mists.~
+@409= ~Glow with promise, huh? In that case, I must illuminate the heavens from any distance.~
+@410= ~What competition?~
+//'Kay. @99
+@411= ~Let us say my darling has a vested interest in seeing adventurers flourish. Better still if she assists in your rise.~
+@412= ~By the gods, I've fallen victim to a multi-level marketing scheme.~
+@413= ~Were I scheming, you would be none the wiser. Even after you have fallen.~
+@414= ~If she's so great, why does she care what becomes of some adventurer worlds away?~
+@415= ~Precisely because she is so great.~
+@416= ~Prevail because it is your goal to prevail. Shine brightly enough, and perhaps Ilyana will take notice of your achievement. I can disclose no further.~
+@417= ~Fine, but does this mean our rally against the Cowled Wizards was all a pretense?~
+@418= ~None of this sits well with me. There's already a dead god and a mad mage breathing down my neck. What now, an aspiring goddess of adventurers?~
+@419= ~Frankly, I could not care less what she thinks. I'm not doing this for anyone's approval.~
+@420= ~No. The Cowled Wizards are an infestation.~
+@421= ~As Ilyana's avowed, I can state that she has no designs on you.~
+//'Kay @99
+@422= ~Very well. If nothing else, you're concerned with my untimely end, which is more than most. Being that you're undead, how did you meet yours?~
+@423= ~Thank you for your honesty. Let's prevail, then. (Leave.)~
+
+//////////////////////////////////////////////
+// Magic Items
+@428= ~Wow. A Robe of Vecna. Imagine battening the hatches for a necromancy storm.~ // Robe of Vecna
+@429= ~That's Conster Damon's Amulet of Power, which has fascinating properties. One such property allows its wearer to cast spells without verbal components.~ // Amulet of Power
+@430= ~Is that a Cloak of the Shield? Its magic goes a long way against stones thrown by angry mobs.~ // Cloak of the Shield
+@431= ~Arcane grimoires hold such incredible knowledge. Such as page 184 of the Book of Very Darkness, in which...~ // Book of Infinite Spells
+@432= ~Boy howdy, we found Vhailor's Helm. Perhaps one of my favorite spells, Simulacrum's uses are multifarious: logistics, combat, insight, support, and more. Oftentimes, the best course of action is to summon yourself.~ // Vhailor's Helm
+@433= ~Oh, a Wand of Magic Missiles. Wands can store all manner of magicks. Conserve your resources by using a wand. Experience magic by using a wand. Use a wand.~ // Wand of Magic Missiles
+@434= ~Oh, I expected actual paws. While the Paws of the Cheetah could not hold a candle to the bristles of Ilyana's broom, they do stack with movement speed granted by the Haste spell.~ // Paws of the Cheetah
+@435= ~Wow. The One Gift Lost. I once watched from cover as a skeleton uncorked a bottle of Ill- and Implosive-Repute '22. Explosion magic does have a certain allure.~ // One Gift Lost
+@436= ~What a find. This seems to be a lesser Efreeti Bottle without the usual chance for wishes or hostility, but that makes it all the more rare. I would rather my consumables were reliable anyway.~ // Efreeti Bottle
+@437= ~A bonafide Staff of the Magi. See the sigils inscribed along its length? These impart considerable defensive enchantments. What's more, a built-in trump card will activate if you break it over your knee.~ // Staff of the Magi
+@438= ~Bones alive, a figurine of wondrous power. These summon or transform into all sorts of extraplanar creatures. In this case, a black spider. I once owned an ebony fly figurine.~ // Black Spider Figurine
+@439= ~Bully for you, a Flail of Ages. What vile provenance. Rakshasa are duplicitous fiends, but were it not for them, we might not have this fascinating magic weapon.~ // Flail of Ages
+@440= ~Holey moley. It's impressive just how many enchantments have been crammed into the Ring of Gaxx. Some might call its magic evil; they would be wrong. Wrong and stupid.~ // Ring of Gaxx
+@441= ~Woah. Leather armor enchanted with magical darkness folded over one thousand times. This must be Night's Gift. How tenebrous.~ // Night's Gift
+@442= ~A bonafide Iron Horn of Valhalla. Sounding this horn can shift the tide of battle in your favor by summoning a warrior spirit from the Halls.~ // Iron Horn of Valhalla
+@443= ~Bones alive, that short sword is Ilbratha. Not to be confused with its more storied namesake, the Mistress of Battles, this blade can project illusory images of its wielder.~ // Ilbratha
+@444= ~This band must be Edventar's Gift. Something so simple as having your movement safeguarded can have a profound result.~ // Edventar's Gift
+@445= ~Woah. The Cloak of Mirroring's magical glint had better appeal to any defensive-minded adventurer. It dashes spells just like that.~ // Cloak of Mirroring
+@446= ~Boy howdy, is that a foil limited edition Wand of Wonder? Every charge expended is a wonder unto itself. You never know what you are going to get.~ // Wand of Wonder
+@447= ~Oh, Crom Faeyr is a fine example of a Hammer of Thunderbolts. I am lucky to have examined it. But I would rather have the gauntlets or the girdle.~ // Crom Faeyr
+@448= ~A genuine Ring of Fire Control. Ilyana once won a ring of her own after we extinguished a rampaging fire elemental lord. Her command of the element has always been a sight to behold!~ // Ring of Fire Control
+
+//////////////////////////////////////////////
+// Cowled Wizards
+@450= ~Pathetic insects.~
+@451= ~I eat mages like you for breakfast.~
+@452= ~Let us make an example of these Cowled Enforcers.~
+@453= ~Do you also curry favor with roaches and rodents? Their goodwill is meaningless. Never mind how foolhardy it would be to accept a contract without detail.~
+@454= ~Rather than kowtow, we should prove ourselves worthy by undermining their order.~
+@455= ~Well done, <CHARNAME>. With Zallanora defeated, my intel suggests the Cowed Wizards will think twice before approaching us.~ // Zallanora MAGE18Z vvZALLA Add a bit more here.~
+@456= ~She put up quite a fight. Are you sure we don't need to worry about reprisal?~
+@457= ~Good riddance. Let them reflect on that loss and squirm. What does this mean for our alliance?~
+@458= ~I am confident. In their estimation, a few rogue spellcasters would not be worth risking more resources.~
+@459= ~That's great, but what does this mean for our alliance?~
+@460= ~We have not yet thwarted the Cowled Wizards. Only freed ourselves of their yoke.~
+@461= ~We have not yet thwarted the Cowled Wizards. Only freed ourselves of their yoke. Besides, you have been informed of my mission.~
+@462= ~Well, if that means you intend to stick around, it's fine by me.~
+@463= ~Ah, yes. I'm a prime candidate for Ilyana's adventurer hall of fame or something. Well, if that means you intend to stick around, it's fine by me.~
+@464= ~'Kay.~ [vvVALKi]
+
+//////////////////////////////////////////////
+// Intel
+@478= ~Where's this information coming from?~
+@479= ~All you need to know is that my sources live a better life for their trouble.~
+@480= ~Gather any noteworthy intel lately?~
+@481= ~A member of the order of Cowled Wizards has designs on the Planar Sphere marooned in the Slums District. Designs above their station, but designs nevertheless.~
+@482= ~An elven conjurer by the name of Zallanora ranks high within Athkatla's Cowled Enforcers. Dealing with her may be key to checking their power. However, you should be wary. I could not exhume her exact nature, but I can say this one is more than she appears.~
+@483= ~I have in my reports a confirmed sighting of a pair of Silver Pantaloons in the vicinity of the Copper Coronet.~
+@484= ~Rayic Gethras of the Cowled Wizards has ferreted away a Wand of Fire. It's hidden in a trapped container on the top floor of his home in the Docks District.~
+@485= ~Many other undead prowl Athkatla's shadows. For this reason, it would be wise to keep Restoration spells at the ready.~
+@486= ~Speak to Cutpurse in the Bridge District if you have stolen goods that need fencing. Use the codephrase 'Toshinou Kyoukooo!'.~
+@487= ~Keep a rogue stone in your gear. Some keys are not keys.~
+@488= ~My intel mentions one Arkanis Gath in the employ of the Shadow Thieves. I have it on good authority that this man will possess at times an almost godlike penchant for murder. At others, he is merely human.~
+@489= ~The Shadow Thieves hold a seat on the ruling apparatus of Amn, the Council of Six. The two organizations hold a mutually-beneficial arrangement.The Cowled Wizards, on the third hand, have a more turbulent history with the Council.~
+@490= ~Roseshade's Table in the Trade District specializes in stolen contracts.~
+@491= ~I have documented numerous sightings that place the master assassin Artemis Entreri in Athkatla. You would do well to avoid Entreri.~
+@498= ~Your network has been an asset. Much appreciated.~
+@499= ~(Leave.)~
+
+//////////////////////////////////////////////
+// Areas (Change some to on-kill to avoid spoilers.)
+@500= ~Watch yourselves. These ghouls are only a step above ravenous.~ // AR0206 Ghoul Town
+@501= ~More than anything, the beholder's most intriguing trait is its ability to shape reality.~ // AR0205 Beholder Hideout
+@502= ~Thieves guilds are risky prospects for cloak and dagger operations. They dilute talent with common thugs.~ // AR0305 Shadow Thieves Guild Hall
+@503= ~Another den crawling with insects.~ // AR0321 Thief Stronghold
+@504= ~Now this is a true feat of wizardry. Rarely do I see such mastery of the craft.~ // AR0410 Planar Sphere
+@505= ~Ironic that the might of the gods is funneled through something as pitiful as a cleric.~ // AR0703 Temple of Ilmater
+@506= ~The clerics do not want you to know this, but the skeletons in the graveyard are free. You can take them home.~ // AR0800 Graveyard
+@507= ~I am not fond of temples. Let us do what needs doing and leave.~ // AR0900 Temple District
+@508= ~A hidden lair. Would that mine were around.~ // AR1008 Twisted Rune Hideout
+@509= ~I understand the pursuit of immortality. The afterlife can be an agonizing experience. Mine was.~ // AR0526 Kangaxx Crypt
+@510= ~We stand now in a lair of mediocrity.~ // AR1515 Spellhold Main Floor
+@511= ~What could have become an underworld stronghold is instead a posterchild for poor leadership.~ // AR1600 Brynnlaw
+@512= ~These tunnels remind my darling's me of the grub-riding ur-elves I encountered in far-off Realmspace.~ // AR2100 Underdark
+@513= ~Ust Natha bears a surface-level resemblance to Ilyana's subterranean hometown, though Guglia's theocracy admitted high-ranking members of any religion.~ // AR2200 Ust Natha
+@514= ~Wow, what a promising selection of arcane stuff. Who knows what I might find among these wondrous wares. I must browse.~ // AR5011 Arcana Archives
+@515= ~~ // OH6300 Red Wizard Enclave
+@516= ~I have seen, and slain, bigger dragons. But we need not slay every dragon we happen upon. They can be valuable allies.~ // AR1402 Shadow Dragon Lair Unused
+@517= ~I have seen, and slain, bigger dragons. But we need not slay every dragon we happen upon. They can be valuable allies.~ // AR2807 Black Dragon's Hideout Unused
+
+//////////////////////////////////////////////
+// Enemies
+@550= ~Good riddance.~
+@551= ~I have seen, and slain, bigger dragons. But we need not slay every dragon we happen upon. They can be valuable allies.~ // AR2807 Black Dragon's Hideout
+@552= ~The last black dragon with which I came to blows disgorged giant skeletons. It was no match for my darling and my darling's me.~ // AR2807 Black Dragon's Hideout DRAGBLAC
+@553= ~Liches~
+
+//////////////////////////////////////////////
+// Misc Interjections
+@600= ~This man's fanaticism is too deep-seated to risk turning against the Cowled Wizards. We would only empower his cause. Best to cut him down now.~
+
+//////////////////////////////////////////////
+// Tree of Life
+@900= ~Valkrana, your awkward necromancer, has already pledged her life to the hero-witch, Ilyana Miraquinal. How far would she follow you?~
+@901= ~This is far enough, Valkrana.~
+@902= ~I couldn't have gotten this far without you, Valkrana. I'll make do from here.~
+@903= ~I know you have your own priorities, but I could really use your help in the fight to come.~
+@904= ~I would leave if I believed we would fail, or I could not escape. Yet I am here.~
+
+//////////////////////////////////////////////
+// Throne of Bhaal
+@905= ~Bring me Valkrana, the skeletal necromancer.~
+@906= ~This had better be good. I do not take well to summons. Consider yourself fortunate I had just finished collating intel.~
+@907= ~I find myself saddled yet again with the weight of my bloodline. Having Ilyana's chosen by my side would make a hell of a difference. What do you say to another adventure in her name?~
+@908= ~That's exactly what I need you for. Could you haunt the demiplane awhile and gather intel?~
+@909= ~...'Kay.~ [vvVALKi]
+
+//////////////////////////////////////////////
+// Debug Floating Text
+/*
+@1001= ~1~
+@1002= ~2~
+@1003= ~3~
+@1004= ~4~
+@1005= ~5~
+@1006= ~6~
+@1007= ~7~
+@1008= ~8~
+@1009= ~9~
+@1010= ~10~
+@1011= ~11~
+@1012= ~12~
+@1013= ~13~
+@1014= ~14~
+@1015= ~15~
+@1016= ~16~
+@1017= ~17~
+@1018= ~18~
+@1019= ~19~
+@1020= ~20~
+@1021= ~21~
+@1022= ~22~
+@1023= ~23~
+*/
+
+//////////////////////////////////////////////
+// Installer
+@-1006= "--------------------------------------------------------------------
+--------------------------------------------------------------------
+(u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ 
+
+The multiverse's most awkward necromancer, Valkrana
+Recruitable Companion NPC for BG2EE
+Mod by Sailor Cat, Character art by Nyama
+https://valkrana.moe
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+Install ["
