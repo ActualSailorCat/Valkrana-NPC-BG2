@@ -38,14 +38,14 @@ Bones Alive!: Valkrana's quest is freeform and progresses as you confront the Co
 Spellcasting: A focus on defense, necromancy, divination, and countering other wizards.
 Recruitment: Valkrana can be found above the Copper Coronet in the Slums district.
 Starting Gear: Quarterstaff and three scrolls of Animate Dead.
-Voice: Base dialogue set is fully voiced. Quest and other dialogue will come soon.
+Voice: Interaction, interjection, and quest dialogue are all fully voiced.
 
 Notes
 -----
 Not romanceable.
 Doesn't banter with other characters.
 Crossmod content is fine.
-Plan to add EET compatibility. 
+Untested EET compatibility. 
 Not yet compatible with classic BG2.
 
 --------------------------------------------------------------------

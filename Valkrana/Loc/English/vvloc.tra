@@ -11,7 +11,7 @@ Valkrana strikes an odd balance between a child's awkward bearing and the keen e
 // Begin voice lines.
 @4= ~I cannot die here.~ [vvVA0004] // MORALE
 @5= ~You lead well. Not nearly as well as Ilyana, but well enough.~ [vvVA0005] // HAPPY
-@6= ~Your heroics are noteworthy, if only within this limited theatre. Still, a pat on the head is in order.~ // UNHAPPY_ANNOYED She doesn't actually mind those with great reputation, but TN gets annoyed.
+@6= ~Your heroics are noteworthy, if only within this limited theatre. Still, a pat on the head is in order.~ [vvVA0006] // UNHAPPY_ANNOYED She doesn't actually mind those with great reputation, but TN gets annoyed.
 @7= ~Your misdeeds threaten Ilyana's reputation. Change course, or I will be forced to leave. Or worse.~ [vvVA0007] // UNHAPPY_SERIOUS
 @8= ~As right hand to Ilyana Miraquinal, I can no longer tolerate your company. Continue this path, and you may find there are worse enemies than Jon Irenicus. Bye.~ [vvVA0008] // UNHAPPY_BREAKING
 @9= ~I am Valkrana Miraquinal. Right hand and biggest fan of the great, mighty, unrivaled witch Ilyana Miraquinal.~ [vvVALKim]
@@ -135,30 +135,30 @@ While her awkwardness is unabating, it seems to me Valkrana's been looking out f
 @203= ~Hi. ...Hi.~ [vvVALKg]
 @204= ~(Show her the note.) Did you slip this into my pocket?~
 @205= ~(Attack.) Befoul this land no more, creature!~
-@206= ~No. I had someone else do it.~
-@207= ~I am Valkrana, right hand and biggest fan of the great, mighty, unrivaled witch Ilyana Miraquinal. You, <CHARNAME>, are an enemy of my enemy.~
+@206= ~No. I had someone else do it.~ [vvVA0206]
+@207= ~I am Valkrana, right hand and biggest fan of the great, mighty, unrivaled witch Ilyana Miraquinal. You, <CHARNAME>, are an enemy of my enemy.~ [vvVA0207]
 @208= ~You'll have to be more specific. Everyone's clamouring to be my enemy.~
 @209= ~You're... openly undead?~
 @210= ~Right. Who are you?~
-@211= ~The Cowled Wizards. Middling spellcasters whose only real power is authority. Normally, I would not care, but their stranglehold on magic is troublesome.~
+@211= ~The Cowled Wizards. Middling spellcasters whose only real power is authority. Normally, I would not care, but their stranglehold on magic is troublesome.~ [vvVA0211]
 @212= ~Why not join me? We should combine our efforts against the Cowled Wizards.~
 @213= ~Yeah, they're a real piece of work.~
 @214= ~'Kay.~ [vvVALKi]
 @215= ~...'Kay.~ [vvVALKi]
 @216= ~...Few can see through my darling's suggestions.
 
-...Unlike mortals, I am in control of my base instincts.~
+...Unlike mortals, I am in control of my base instincts.~ [vvVA0216]
 @217= ~That's reassuring. Surely, you understand my concern.~
 @218= ~Just yesterday, I ate three roast boars in one sitting.~
 @219= ~I'm not sure I trust you. I'll be going now.~
-@220= ~"Hi. ...Hi."~
+@220= ~"Hi. ...Hi."~ [vvVALKg]
 @221= ~~
 @222= ~Why not join me? We should combine our efforts against the Cowled Wizards.~
 @223= ~'Kay.~ [vvVALKi]
 
 //////////////////////////////////////////////
 // Kicking from and rejoining party.
-@250= ~'Kay. Bye.~
+@250= ~'Kay. Bye.~ [vvVA0250]
 @251= ~On second thought, your intel network is an asset to the party.~
 @252= ~You're too awkward for my bones. Another time, perhaps.~
 @253= ~You were right. You're the smartest person I'll ever meet. Let's party up.~
@@ -167,51 +167,50 @@ While her awkwardness is unabating, it seems to me Valkrana's been looking out f
 //////////////////////////////////////////////
 // Magic Item Milestones
 // 1 Magic Items
-@300= ~I am here on a mission. That, I have not forgotten. Be that as it may, adventuring so often brings a steady flow of new and fascinating arcana. I like that it does.~
+@300= ~I am here on a mission. That, I have not forgotten. Be that as it may, adventuring so often brings a steady flow of new and fascinating arcana. I like that it does.~ [vvVA0300]
 @301= ~You're usually the very image of apathy, so your enthusiasm caught me by surprise when we first stumbled upon a magic item.~
 @302= ~We can't stop by Waukeen's Promenade without you spending an hour in the Adventurer's Mart. Gods know you don't need to go adventuring to find magic items.~
-@303= ~That is what I said.~
-@304= ~I enjoy browsing. Rarely, one might discover new stock, or something that had been overlooked in a dark cranny. But one is not the other.~
+@303= ~That is what I said.~ [vvVA0303]
+@304= ~I enjoy browsing. Rarely, one might discover new stock, or something that had been overlooked in a dark cranny. But one is not the other.~ [vvVA0304]
 @305= ~Magic-obsessed wizards are as common as they come, but yours has a glimmer of fascination.~
 @306= ~We wizards are magic-obsessed by nature. Yours, however, has a glimmer of fascination.~
-@307= ~Magic is... more than my craft. Magic salvaged my soul. Magic is warm memories shared with Papa. (Her boney fingers clink in quiet consideration.)~
-@308= ~Magic is my key. It is how I unlock a world with which my interactions have always fallen short.~
+@307= ~Magic is... more than my craft. Magic salvaged my soul. Magic is warm memories shared with Papa. (Her boney fingers clink in quiet consideration.)~ [vvVA0307]
+@308= ~Magic is my key. It is how I unlock a world with which my interactions have always fallen short.~ [vvVA0308]
 @309= ~It's clearly very dear to you. Let's look forward to future magic encounters, then.~
 @310= ~I see. Maybe we'll happen upon a flying necromantic whale.~
 @311= ~...'Kay.~ [vvVALKi]
-@312= ~...Maybe.~
+@312= ~...Maybe.~ [vvVA0312]
 @313= ~Well, what do you suppose we'll find next?~
-@314= ~I have seen things you people would not believe. Dragonstorms on fire in the skies of interdimensional fortress Citadella Ilyana. The eldritch escalator that haunts my demiplanes. Skeletons jettisoned from geysers.~
+@314= ~I have seen things you people would not believe. Dragonstorms on fire in the skies of interdimensional fortress Citadella Ilyana. The eldritch escalator that haunts my demiplanes. Skeletons jettisoned from geysers.~ [vvVA0314]
 @315= ~Eldritch wh—~
 @316= ~That's—~
-@317= ~This one time I drew a card from the Deck of Many Bones. And do you know what card I drew? I drew the Skeleton Conservation Zone. Half the city's population became skeletons; half its architecture, skeletal. And not a single person complained. Bones alive, what arcane wonders.~
+@317= ~This one time I drew a card from the Deck of Many Bones. And do you know what card I drew? I drew the Skeleton Conservation Zone. Half the city's population became skeletons; half its architecture, skeletal. And not a single person complained. Bones alive, what arcane wonders.~ [vvVA0317]
 @318= ~Now wait just a—~
 @319= ~And this one time...~
 @320= ~(Listen.)~
 
 // 2 Ilyana
-@325= ~Would that Ilyana were here to share in these magicks and adventures. It is not enough to merely view them from afar.~
-// Where is she while you're here blah blah blah?
+@325= ~Would that Ilyana were here to share in these magicks and adventures. It is not enough to merely view them from afar.~ [vvVA0325]
 @326= ~Ah, yes. The great, mighty, unrivaled witch. You may have mentioned her.~
 @327= ~'Merely view them from afar'?~
-@328= ~I have.~
-@329= ~My darling is incredible. She has led adventure after adventure after adventure. She is the Master of Adventures at multiple guilds on multiple worlds, and is known among adventurers for both her feats and as a patroness. And, and clinging to her tightly as she tangles with a dragon, casting fireballs and psionic strikes from her broom. Bones alive, that is a gripping experience. Every time!~
-@330= ~This one time, during our journey across the Abyss, we were waylaid by a devourer, one sinister servant of Orcus. With absolute command, my darling wedged a psychic lance so deep within its mind as to render it utterly debilitated. All that was left for the rest of us was to execute the fiend like so much wind.~
+@328= ~I have.~ [vvVA0328]
+@329= ~My darling is incredible. She has led adventure after adventure after adventure. She is the Master of Adventures at multiple guilds on multiple worlds, and is known among adventurers for both her feats and as a patroness. And, and clinging to her tightly as she tangles with a dragon, casting fireballs and psionic strikes from her broom. Bones alive, that is a gripping experience. Every time!~ [vvVA0329]
+@330= ~This one time, during our journey across the Abyss, we were waylaid by a devourer, one sinister servant of Orcus. With absolute command, my darling wedged a psychic lance so deep within its mind as to render it utterly debilitated. All that was left for the rest of us was to execute the fiend like so much wind.~ [vvVA0330]
 @331= ~Surely, this is all sorts of exaggerated. You are her envoy, after all.~
 @332= ~You really enjoy being along for the ride during something so harrowing? Never mind life-threatening.~
-@333= ~My perception may be colored, but I am not her bard; I do not exaggerate. Besides, she forbade it.~
-@334= ~Lots and lots.~
+@333= ~My perception may be colored, but I am not her bard; I do not exaggerate. Besides, she forbade it.~ [vvVA0333]
+@334= ~Lots and lots.~ [vvVA0334]
 @335= ~Got any normal memories in that skull? These threads of yours weave a heroic tapestry, but make her less relatable.~
-@336= ~Normal? Ilyana is extraordinary.~
+@336= ~Normal? Ilyana is extraordinary.~ [vvVA0336]
 @337= ~You speak always of her feats, but there's more to us than our greatest moments. Even heroes have downtime. The everyday.~
-@338= ~Oh. Well, it is her preference that I wear a maid outfit during homemaking duties, and sometimes when performing other tasks.~
+@338= ~Oh. Well, it is her preference that I wear a maid outfit during homemaking duties, and sometimes when performing other tasks.~ [vvVA0338]
 @339= ~Not quite what I was getting at. You shouldn't be so forthcoming with information best left behind closed doors.~
 @340= ~She has you slip into a maid outfit? You?~
-@341= ~Yes.~
-@342= ~I have a firm grasp on what is and is not confidential, or even top secret, intel. I cannot say the same for 'normal'.~
+@341= ~Yes.~ [vvVA0341]
+@342= ~I have a firm grasp on what is and is not confidential, or even top secret, intel. I cannot say the same for 'normal'.~ [vvVA0342]
 @343= ~Still, that was choice, in a way. Incisive in cutting through the grandeur to make her appear more down to earth.~
-@344= ~Down to earth... Ilyana is partial to earthy foods. Sautéed mushrooms, baked parsnips, and roasted yams all appeal to her palate. Just recently, shiitake glazed with kiwi reduced to a sauce.~
-@345= ~And she finds mirth in even my most miserable attempts at puns.~
+@344= ~Down to earth... Ilyana is partial to earthy foods. Sautéed mushrooms, baked parsnips, and roasted yams all appeal to her palate. Just recently, shiitake glazed with kiwi reduced to a sauce.~ [vvVA0344]
+@345= ~And she finds mirth in even my most miserable attempts at puns.~ [vvVA0345]
 @346= ~You lay the heroism on thick. Consider breaking it up every now and then with anecdotes such as these.~
 @347= ~Thank you for indulging me. And don't get the wrong impression. Death hangs close to adventurers; tales of success are a beacon of hope among our kind.~
 @348= ~Earlier, you mentioned something along the lines of viewing our magicks and adventures from afar.~
@@ -219,129 +218,129 @@ While her awkwardness is unabating, it seems to me Valkrana's been looking out f
 
 @350= ~Yes.~ [vvVA0341]
 @351= ~What did you mean by that?~
-@352= ~We share a telepathic link. Otherwise, I would have trouble performing my role while separated.~
+@352= ~We share a telepathic link. Otherwise, I would have trouble performing my role while separated.~ [vvVA0352]
 @353= ~You mean to tell me she's always watching?~
-@354= ~And hearing.~
+@354= ~And hearing.~ [vvVA0354]
 @355= ~I'm not sure how to take that. I wasn't aware you had someone looking over your shoulder at all times.~
 @356= ~I suppose you are her subordinate. It's only circumspect to keep tabs on your minions.~
-@357= ~The link exists for my benefit more than hers. These far-flung missions would prove impossible for my darling's me if I could not share in her senses. Even with the connection, I struggle.~
+@357= ~The link exists for my benefit more than hers. These far-flung missions would prove impossible for my darling's me if I could not share in her senses. Even with the connection, I struggle.~ [vvVA0357]
 @358= ~You often refer to yourself as 'my darling's me'. It makes you sound like a possession.~
 @359= ~You're an odd one, Valkrana. I can't relate to the need to have someone under constant surveillance.~
-@360= ~I am odd. Ilyana accepts as much. The telepathic link is her doing, not mine.~
-@361= ~I am hers. As centuries pass and worlds change, as people enter and exit her life, I will be her constant.~
+@360= ~I am odd. Ilyana accepts as much. The telepathic link is her doing, not mine.~ [vvVA0360]
+@361= ~I am hers. As centuries pass and worlds change, as people enter and exit her life, I will be her constant.~ [vvVA0361]
 
 // 3 Valkrana Stuff + Mission
-@362= ~It is better to be circumspect than lose your life. There are always other magicks and other adventures.~
+@362= ~It is better to be circumspect than lose your life. There are always other magicks and other adventures.~ [vvVA0362]
 @363= ~You speak the truth, Valkrana. Glory is meaningless if we aren't around to reap the rewards.~
 @364= ~That line of thinking won't get you into Valhalla. The bards don't sing about cowards, Valkrana.~
 @365= ~Is that a hint of concern I'm detecting, buried deep within your pragmatism?~
-@366= ~Your untimely end would be a detriment to my mission.~
+@366= ~Your untimely end would be a detriment to my mission.~ [vvVA0366]
 @367= ~Being that you're undead, you've already met your untimely end. What happened?~
 @368= ~This isn't the first time you've mentioned a mission. Do you enjoy being cryptic, or is it privileged knowledge?~
 
 //Undeath
-@370= ~Papa's proclivity for dragons led him into the hoard of the world dragon Ssstzrazolik, which resulted in my wretched conception.~
+@370= ~Papa's proclivity for dragons led him into the hoard of the world dragon Ssstzrazolik, which resulted in my wretched conception.~ [vvVA0370]
 @371= ~You mean to tell me you're a dragon? Your appearance isn't exactly convincing.~
 @372= ~(Say nothing.)~
-@373= ~Yes. Half, and only in soul.~
-@374= ~On my homeworld, these legendary dragons were veritable demigods, intrinsically tied to the well-being of the planet. But I was born an elf. Because my soul burned white-hot with the lineage of my birth mother, my inferior elven vessel could no more contain it than whey in cheesecloth. I would have lived a short life.~
+@373= ~Yes. Half, and only in soul.~ [vvVA0373]
+@374= ~On my homeworld, these legendary dragons were veritable demigods, intrinsically tied to the well-being of the planet. But I was born an elf. Because my soul burned white-hot with the lineage of my birth mother, my inferior elven vessel could no more contain it than whey in cheesecloth. I would have lived a short life.~ [vvVA0374]
 @375= ~I see. You succumbed to your illness then.~
 @376= ~That's how it goes. The weak are bound to be trodden underfoot by the mighty. You just happened to be both.~
-@377= ~I did not. Like any other urchin, I wandered the slums, divesting corpses of skeletons. Unlike them, I—~
+@377= ~I did not. Like any other urchin, I wandered the slums, divesting corpses of skeletons. Unlike them, I—~ [vvVA0377]
 @378= ~Divesting corpses of skeletons is decidedly *not* like any other urchin.~
 //~(Say nothing.)~ @372
-@379= ~Why?~
+@379= ~Why?~ [vvVA0379]
 @380= ~Because that's not normal.~
-@381= ~I do not follow.~
+@381= ~I do not follow.~ [vvVA0381]
 @382= ~Never mind. Go on.~
 @383= ~Something is wrong with you.~
 //'Kay. @99
-@384= ~Unlike them, I was outcast for both my illness and my awkwardness. In the late stages of my condition, I sought out one of the dragons that Papa would describe with such passion. There, I perished in a backwater lair to the claw of some petty swamp dragon.~
+@384= ~Unlike them, I was outcast for both my illness and my awkwardness. In the late stages of my condition, I sought out one of the dragons that Papa would describe with such passion. There, I perished in a backwater lair to the claw of some petty swamp dragon.~ [vvVA0384]
 @385= ~Even the spriest child would have trouble finding their way into the lair of a dragon.~
 @386= ~I've got to hand it to you: you went out in style. Better that than the mewl of a deathbed.~
 @387= ~Ironic that either fate would have had you done in by a dragon.~
-@388= ~Resourceful beats hale until you are dead. What's more, Papa had a surfeit of maps, and had imparted vast knowledge of the race.~
-@389= ~Death is death. I learned to avoid it at any cost. Some souls are more equal than others.~
-@390= ~Papa had a surfeit of maps. I wished to experience what had inspired in him such wonder.~
+@388= ~Resourceful beats hale until you are dead. What's more, Papa had a surfeit of maps, and had imparted vast knowledge of the race.~ [vvVA0388]
+@389= ~Death is death. I learned to avoid it at any cost. Some souls are more equal than others.~ [vvVA0389]
+@390= ~Papa had a surfeit of maps. I wished to experience what had inspired in him such wonder.~ [vvVA0390]
 @391= ~And then you were reanimated. Did that not come as a shock, waking up to find you've been made undead against your will?~
-@392= ~No. This undead vessel can withstand my soul. The unabating hunger was challenging at first, but a locked trunk can hone self control.~
+@392= ~No. This undead vessel can withstand my soul. The unabating hunger was challenging at first, but a locked trunk can hone self control.~ [vvVA0392]
 @393= ~I should've known you'd be unfazed. Not a question I get to ask, well, any undead, but what's it like?~
 @394= ~What was locked in the trunk?~
-@395= ~My darling's me.~
+@395= ~My darling's me.~ [vvVA0395]
 @396= ~That comes off as more than a little extreme.~
 @397= ~Ah, that tracks. Unabating hunger and all.~
-@398= ~Papa always did what was best for my darling's me. His reasoning was sound.~
+@398= ~Papa always did what was best for my darling's me. His reasoning was sound.~ [vvVA0398]
 @399= ~What is what like?~
 @400= ~Being undead, Valkrana.~
 @401= ~Oh. What little I can recall from my time as an elf was both unpleasant and fleeting, so my point of reference is unreliable.
 
-Undeath manifests differently from creature to creature, but its tireless nature affords greater freedom to focus on Ilyana's needs. The vilification can be a hindrance, but my personality would be an obstacle even if I were not undead.~
+Undeath manifests differently from creature to creature, but its tireless nature affords greater freedom to focus on Ilyana's needs. The vilification can be a hindrance, but my personality would be an obstacle even if I were not undead.~ [vvVA0401]
 @402= ~That was a more practical perspective than I had hoped for, but I'm glad you're willing to share. Your history is as strange as you are, Valkrana. Now, what's this about a mission?~
 @403= ~That was insightful. You're a tough nut to crack, Valkrana, but I feel as if we've grown closer. Now, what do you say we find ourselves a dragon to slay. (Leave.)~
 
 //Mission
-@369= ~No.~
+@369= ~No.~  [vvVA0369]
 @404= ~'No' to which exactly? Out with it, Valkrana.~
-@405= ~...I cannot divulge my every objective, but there are turning points in which adventurers are forged. To Ilyana, they glow with promise.~
-@406= ~Much like an avatar to a god, I am Ilyana's champion. As such, I am charged at times with scouting these adventurers. As of now, you have my attention, and have proven yourself worthy of a limited explanation.~
+@405= ~...I cannot divulge my every objective, but there are turning points in which adventurers are forged. To Ilyana, they glow with promise.~ [vvVA0405]
+@406= ~Much like an avatar to a god, I am Ilyana's champion. As such, I am charged at times with scouting these adventurers. As of now, you have my attention, and have proven yourself worthy of a limited explanation.~ [vvVA0406]
 @407= ~Ah. So your darling's keeping an eye on the competition.~
 @408= ~Your attention? Scouting? Glow with promise? You're still being as cryptic as the Lady of Mists.~
 @409= ~Glow with promise, huh? In that case, I must illuminate the heavens from any distance.~
-@410= ~What competition?~
+@410= ~What competition?~ [vvVA0410]
 //'Kay. @99
-@411= ~Let us say my darling has a vested interest in seeing adventurers flourish. Better still if she assists in your rise.~
+@411= ~Let us say my darling has a vested interest in seeing adventurers flourish. Better still if she assists in your rise.~ [vvVA0411]
 @412= ~By the gods, I've fallen victim to a multi-level marketing scheme.~
-@413= ~Were I scheming, you would be none the wiser. Even after you have fallen.~
+@413= ~Were I scheming, you would be none the wiser. Even after you have fallen.~ [vvVA0413]
 @414= ~If she's so great, why does she care what becomes of some adventurer worlds away?~
-@415= ~Precisely because she is so great.~
-@416= ~Prevail because it is your goal to prevail. Shine brightly enough, and perhaps Ilyana will take notice of your achievement. I can disclose no further.~
+@415= ~Precisely because she is so great.~ [vvVA0415]
+@416= ~Prevail because it is your goal to prevail. Shine brightly enough, and perhaps Ilyana will take notice of your achievement. I can disclose no further.~ [vvVA0416]
 @417= ~Fine, but does this mean our rally against the Cowled Wizards was all a pretense?~
 @418= ~None of this sits well with me. There's already a dead god and a mad mage breathing down my neck. What now, an aspiring goddess of adventurers?~
 @419= ~Frankly, I could not care less what she thinks. I'm not doing this for anyone's approval.~
-@420= ~No. The Cowled Wizards are an infestation.~
-@421= ~As Ilyana's avowed, I can state that she has no designs on you.~
+@420= ~No. The Cowled Wizards are an infestation.~ [vvVA0420]
+@421= ~As Ilyana's avowed, I can state that she has no designs on you.~ [vvVA0421]
 //'Kay @99
 @422= ~Very well. If nothing else, you're concerned with my untimely end, which is more than most. Being that you're undead, how did you meet yours?~
 @423= ~Thank you for your honesty. Let's prevail, then. (Leave.)~
 
 //////////////////////////////////////////////
 // Magic Items
-@428= ~Wow. A Robe of Vecna. Imagine battening the hatches for a necromancy storm.~ // Robe of Vecna
-@429= ~That's Conster Damon's Amulet of Power, which has fascinating properties. One such property allows its wearer to cast spells without verbal components.~ // Amulet of Power
-@430= ~Is that a Cloak of the Shield? Its magic goes a long way against stones thrown by angry mobs.~ // Cloak of the Shield
-@431= ~Arcane grimoires hold such incredible knowledge. Such as page 184 of the Book of Very Darkness, in which...~ // Book of Infinite Spells
-@432= ~Boy howdy, we found Vhailor's Helm. Perhaps one of my favorite spells, Simulacrum's uses are multifarious: logistics, combat, insight, support, and more. Oftentimes, the best course of action is to summon yourself.~ // Vhailor's Helm
-@433= ~Oh, a Wand of Magic Missiles. Wands can store all manner of magicks. Conserve your resources by using a wand. Experience magic by using a wand. Use a wand.~ // Wand of Magic Missiles
-@434= ~Oh, I expected actual paws. While the Paws of the Cheetah could not hold a candle to the bristles of Ilyana's broom, they do stack with movement speed granted by the Haste spell.~ // Paws of the Cheetah
-@435= ~Wow. The One Gift Lost. I once watched from cover as a skeleton uncorked a bottle of Ill- and Implosive-Repute '22. Explosion magic does have a certain allure.~ // One Gift Lost
-@436= ~What a find. This seems to be a lesser Efreeti Bottle without the usual chance for wishes or hostility, but that makes it all the more rare. I would rather my consumables were reliable anyway.~ // Efreeti Bottle
-@437= ~A bonafide Staff of the Magi. See the sigils inscribed along its length? These impart considerable defensive enchantments. What's more, a built-in trump card will activate if you break it over your knee.~ // Staff of the Magi
-@438= ~Bones alive, a figurine of wondrous power. These summon or transform into all sorts of extraplanar creatures. In this case, a black spider. I once owned an ebony fly figurine.~ // Black Spider Figurine
-@439= ~Bully for you, a Flail of Ages. What vile provenance. Rakshasa are duplicitous fiends, but were it not for them, we might not have this fascinating magic weapon.~ // Flail of Ages
-@440= ~Holey moley. It's impressive just how many enchantments have been crammed into the Ring of Gaxx. Some might call its magic evil; they would be wrong. Wrong and stupid.~ // Ring of Gaxx
-@441= ~Woah. Leather armor enchanted with magical darkness folded over one thousand times. This must be Night's Gift. How tenebrous.~ // Night's Gift
-@442= ~A bonafide Iron Horn of Valhalla. Sounding this horn can shift the tide of battle in your favor by summoning a warrior spirit from the Halls.~ // Iron Horn of Valhalla
-@443= ~Bones alive, that short sword is Ilbratha. Not to be confused with its more storied namesake, the Mistress of Battles, this blade can project illusory images of its wielder.~ // Ilbratha
-@444= ~This band must be Edventar's Gift. Something so simple as having your movement safeguarded can have a profound result.~ // Edventar's Gift
-@445= ~Woah. The Cloak of Mirroring's magical glint had better appeal to any defensive-minded adventurer. It dashes spells just like that.~ // Cloak of Mirroring
-@446= ~Boy howdy, is that a foil limited edition Wand of Wonder? Every charge expended is a wonder unto itself. You never know what you are going to get.~ // Wand of Wonder
-@447= ~Oh, Crom Faeyr is a fine example of a Hammer of Thunderbolts. I am lucky to have examined it. But I would rather have the gauntlets or the girdle.~ // Crom Faeyr
-@448= ~A genuine Ring of Fire Control. Ilyana once won a ring of her own after we extinguished a rampaging fire elemental lord. Her command of the element has always been a sight to behold!~ // Ring of Fire Control
+@428= ~Wow. A Robe of Vecna. Imagine battening the hatches for a necromancy storm.~ [vvVA0428] // Robe of Vecna
+@429= ~That is Conster Damon's Amulet of Power, which has fascinating properties. One such property allows its wearer to cast spells without verbal components.~ [vvVA0429] // Amulet of Power
+@430= ~Is that a Cloak of the Shield? Its magic goes a long way against stones thrown by angry mobs.~ [vvVA0430] // Cloak of the Shield
+@431= ~Arcane grimoires hold such incredible knowledge. Such as page 184 of the Book of Very Darkness, in which...~ [vvVA0431] // Book of Infinite Spells
+@432= ~Boy howdy, we found Vhailor's Helm. Perhaps one of my favorite spells, Simulacrum's uses are multifarious: logistics, combat, insight, support, and more. Oftentimes, the best course of action is to summon yourself.~ [vvVA0432] // Vhailor's Helm
+@433= ~Oh, a Wand of Magic Missiles. Wands can store all manner of magicks. Conserve your resources by using a wand. Experience magic by using a wand. Use a wand.~ [vvVA0433] // Wand of Magic Missiles
+@434= ~Oh, I expected actual paws. While the Paws of the Cheetah could not hold a candle to the bristles of Ilyana's broom, they do stack with movement speed granted by the Haste spell.~ [vvVA0434] // Paws of the Cheetah
+@435= ~Wow. The One Gift Lost. I once watched from cover as a skeleton uncorked a bottle of Ill- and Implosive-Repute '22. Explosion magic does have a certain allure.~ [vvVA0435] // One Gift Lost
+@436= ~What a find. This seems to be a lesser Efreeti Bottle without the usual chance for wishes or hostility, but that makes it all the more rare. I would rather my consumables were reliable anyway.~ [vvVA0436] // Efreeti Bottle
+@437= ~A bonafide Staff of the Magi. See the sigils inscribed along its length? These impart considerable defensive enchantments. What's more, a built-in trump card will activate if you break it over your knee.~ [vvVA0437] // Staff of the Magi
+@438= ~Bones alive, a figurine of wondrous power. These summon or transform into all sorts of extraplanar creatures. In this case, a black spider. I once owned an ebony fly figurine.~ [vvVA0438] // Black Spider Figurine
+@439= ~Bully for you, a Flail of Ages. What vile provenance. Rakshasa are duplicitous fiends, but were it not for them, we might not have this fascinating magic weapon.~ [vvVA0439] // Flail of Ages
+@440= ~Holey moley. It's impressive just how many enchantments have been crammed into the Ring of Gaxx. Some might call its magic evil; they would be wrong. Wrong and stupid.~ [vvVA0440] // Ring of Gaxx
+@441= ~Woah. Leather armor enchanted with magical darkness folded over one thousand times. This must be Night's Gift. How tenebrous.~ [vvVA0441] // Night's Gift
+@442= ~A bonafide Iron Horn of Valhalla. Sounding this horn can shift the tide of battle in your favor by summoning a warrior spirit from the Halls.~ [vvVA0442] // Iron Horn of Valhalla
+@443= ~Bones alive, that short sword is Ilbratha. Not to be confused with its more storied namesake, the Mistress of Battles, this blade can project illusory images of its wielder.~ [vvVA0443] // Ilbratha
+@444= ~This band must be Edventar's Gift. Something so simple as having your movement safeguarded can have a profound result.~ [vvVA0444] // Edventar's Gift
+@445= ~Woah. The Cloak of Mirroring's magical glint had better appeal to any defensive-minded adventurer. It dashes spells just like that.~ [vvVA0445] // Cloak of Mirroring
+@446= ~Boy howdy, is that a foil limited edition Wand of Wonder? Every charge expended is a wonder unto itself. You never know what you are going to get.~ [vvVA0446] // Wand of Wonder
+@447= ~Oh, Crom Faeyr is a fine example of a Hammer of Thunderbolts. I am lucky to have examined it. But I would rather have the gauntlets or the girdle.~ [vvVA0447] // Crom Faeyr
+@448= ~A genuine Ring of Fire Control. Ilyana once won a ring of her own after we extinguished a rampaging fire elemental lord. Her command of the element has always been a sight to behold!~ [vvVA0448] // Ring of Fire Control
 
 //////////////////////////////////////////////
 // Cowled Wizards
-@450= ~Pathetic insects.~
-@451= ~I eat mages like you for breakfast.~
-@452= ~Let us make an example of these Cowled Enforcers.~
-@453= ~Do you also curry favor with roaches and rodents? Their goodwill is meaningless. Never mind how foolhardy it would be to accept a contract without detail.~
-@454= ~Rather than kowtow, we should prove ourselves worthy by undermining their order.~
-@455= ~Well done, <CHARNAME>. With Zallanora defeated, my intel suggests the Cowed Wizards will think twice before approaching us.~ // Zallanora MAGE18Z vvZALLA Add a bit more here.~
+@450= ~Pathetic insects.~ [vvVA0450]
+@451= ~I eat mages like you for breakfast.~ [vvVA0451]
+@452= ~Let us make an example of these Cowled Enforcers.~ [vvVA0452]
+@453= ~Do you also curry favor with roaches and rodents? Their goodwill is meaningless. Never mind how foolhardy it would be to accept a contract without detail.~ [vvVA0453]
+@454= ~Rather than kowtow, we should prove ourselves worthy by undermining their order.~ [vvVA0454]
+@455= ~Well done, <CHARNAME>. With Zallanora defeated, my intel suggests the Cowed Wizards will think twice before approaching us.~ // Zallanora MAGE18Z vvZALLA Add a bit more here.~ [vvVA0455]
 @456= ~She put up quite a fight. Are you sure we don't need to worry about reprisal?~
 @457= ~Good riddance. Let them reflect on that loss and squirm. What does this mean for our alliance?~
-@458= ~I am confident. In their estimation, a few rogue spellcasters would not be worth risking more resources.~
+@458= ~I am confident. In their estimation, a few rogue spellcasters would not be worth risking more resources.~ [vvVA0458]
 @459= ~That's great, but what does this mean for our alliance?~
-@460= ~We have not yet thwarted the Cowled Wizards. Only freed ourselves of their yoke.~
-@461= ~We have not yet thwarted the Cowled Wizards. Only freed ourselves of their yoke. Besides, you have been informed of my mission.~
+@460= ~We have not yet thwarted the Cowled Wizards. Only freed ourselves of their yoke.~ [vvVA0460]
+@461= ~We have not yet thwarted the Cowled Wizards. Only freed ourselves of their yoke. Besides, you have been informed of my mission.~ [vvVA0461]
 @462= ~Well, if that means you intend to stick around, it's fine by me.~
 @463= ~Ah, yes. I'm a prime candidate for Ilyana's adventurer hall of fame or something. Well, if that means you intend to stick around, it's fine by me.~
 @464= ~'Kay.~ [vvVALKi]
@@ -388,14 +387,14 @@ Undeath manifests differently from creature to creature, but its tireless nature
 
 //////////////////////////////////////////////
 // Enemies
-@550= ~Good riddance.~
+@550= ~Good riddance.~ [vvVA0550]
 @551= ~I have seen, and slain, bigger dragons. But we need not slay every dragon we happen upon. They can be valuable allies.~ // AR2807 Black Dragon's Hideout
 @552= ~The last black dragon with which I came to blows disgorged giant skeletons. It was no match for my darling and my darling's me.~ // AR2807 Black Dragon's Hideout DRAGBLAC
 @553= ~Liches~
 
 //////////////////////////////////////////////
 // Misc Interjections
-@600= ~This man's fanaticism is too deep-seated to risk turning against the Cowled Wizards. We would only empower his cause. Best to cut him down now.~
+@600= ~This man's fanaticism is too intransigent to risk turning against the Cowled Wizards. We would only empower his cause. Best to cut him down now.~ [vvVA0600]
 
 //////////////////////////////////////////////
 // Tree of Life
@@ -403,12 +402,12 @@ Undeath manifests differently from creature to creature, but its tireless nature
 @901= ~This is far enough, Valkrana.~
 @902= ~I couldn't have gotten this far without you, Valkrana. I'll make do from here.~
 @903= ~I know you have your own priorities, but I could really use your help in the fight to come.~
-@904= ~I would leave if I believed we would fail, or I could not escape. Yet I am here.~
+@904= ~I would leave if I believed we would fail, or I could not escape. Yet I am here.~ [vvVA0904]
 
 //////////////////////////////////////////////
 // Throne of Bhaal
 @905= ~Bring me Valkrana, the skeletal necromancer.~
-@906= ~This had better be good. I do not take well to summons. Consider yourself fortunate I had just finished collating intel.~
+@906= ~This had better be good. I do not take well to summons. Consider yourself fortunate I had just finished collating intel.~ [vvVA0906]
 @907= ~I find myself saddled yet again with the weight of my bloodline. Having Ilyana's chosen by my side would make a hell of a difference. What do you say to another adventure in her name?~
 @908= ~That's exactly what I need you for. Could you haunt the demiplane awhile and gather intel?~
 @909= ~...'Kay.~ [vvVALKi]

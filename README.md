@@ -30,7 +30,7 @@ Valkrana strikes an odd balance between a child's awkward bearing and the keen e
 * Spellcasting: A focus on defense, necromancy, divination, and countering other wizards.
 * Recruitment: Valkrana can be found above the Copper Coronet in the Slums district.
 * Starting Gear: Quarterstaff and three scrolls of Animate Dead.
-* Voice: Base dialogue set is fully voiced. Quest and other dialogue will come soon.
+* Voice: Interaction, interjection, and quest dialogue are all fully voiced.
 
   
 ## Notes   
