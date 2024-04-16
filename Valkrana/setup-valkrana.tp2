@@ -91,6 +91,7 @@ COMPILE EVALUATE_BUFFER
         "Valkrana\Scripts\vvVALK.baf"
         "Valkrana\Scripts\vvVALKF.baf"
         "Valkrana\Scripts\vvVALKAI.baf"
+EXTEND_BOTTOM ~vvVALK.bcs~ ~Valkrana\Scripts\vvVALKLV.baf~
 
 // Audio
 LAF HANDLE_AUDIO
