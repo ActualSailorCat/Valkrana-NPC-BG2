@@ -31,6 +31,7 @@ Details
 Gender: Female
 Class: Necromancer
 Racial Features: As a skeleton, Valkrana has several undead traits: Cold resistance 25, poison immunity, immunity to level drain, and immunity to the Nature's Beauty spell.
+100+ Voice Lines: Interaction, interjection, and quest dialogue are all fully voiced.
 Stats: STR 8, DEX 10, CON 14, INT 21, WIS 16, CHA 7
 Alignment: Neutral
 Bonuses: Valkrana's fascination with the arcane provides a boost to Lore. She also knows the Simulacrum spell despite her specialist limitation.
@@ -38,7 +39,6 @@ Bones Alive!: Valkrana's quest is freeform and progresses as you confront the Co
 Spellcasting: A focus on defense, necromancy, divination, and countering other wizards.
 Recruitment: Valkrana can be found above the Copper Coronet in the Slums district.
 Starting Gear: Quarterstaff and three scrolls of Animate Dead.
-Voice: Interaction, interjection, and quest dialogue are all fully voiced.
 
 Notes
 -----
