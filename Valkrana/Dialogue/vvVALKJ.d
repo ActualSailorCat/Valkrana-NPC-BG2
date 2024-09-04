@@ -682,6 +682,21 @@ I_C_T TOLGER 6 vvVALKTOLGER6
 == vvVALKJ IF ~InParty("vvVALK") IsValidForPartyDialogue("vvVALK")~ THEN @453
 END
 
+// Edwin - When you find Rayic Gethras, kill him. Question him beforehand if you like. Any insight into the Cowled Wizards is useful. A little torture would soften him.
+I_C_T EDWIN 4 vvVALKEDWIN4
+== vvVALKJ IF ~InParty("vvVALK") IsValidForPartyDialogue("vvVALK")~ THEN @465
+END
+
+// Edwin - Retrieve the document in any manner that you wish. I would suggest using guile. (But such subtle means are beyond these monkeys, I am sure.)
+I_C_T EDWIN 49 vvVALKEDWIN49
+== vvVALKJ IF ~InParty("vvVALK") IsValidForPartyDialogue("vvVALK")~ THEN @601
+END
+
+// Sassar - It is an item of such destructive power that the gods themselves determined it should not be used again. It was split in two, and this half was secreted here.
+I_C_T SASSAR 32 vvVALKSASSAR32
+== vvVALKJ IF ~InParty("vvVALK") IsValidForPartyDialogue("vvVALK")~ THEN @602
+END
+
 // I am the law.
 I_C_T2 COWENF2 1 vvVALKCOWENF2.1
 == vvVALKJ IF ~InParty("vvVALK") IsValidForPartyDialogue("vvVALK") Global("CowledWarning","GLOBAL",0)~ THEN @450
@@ -710,6 +725,16 @@ END
 // Lord Ketlaar Argrim "Magic abominations."
 I_C_T2 MGKET01 0 vvVALKMGKET010
 == vvVALKJ IF ~InParty("vvVALK") IsValidForPartyDialogue("vvVALK")~ THEN @600
+END
+
+// Rayic Gethras Out, then! Out you go or you shall suffer the wrath of my great magic!
+I_C_T2 DCOWL1 2 vvVALKDCOWL12
+== vvVALKJ IF ~InParty("vvVALK") IsValidForPartyDialogue("vvVALK")~ THEN @466
+END
+
+// Rayic Gethras You were warned! Now I, Rayic Gethras, shall deal with you as the ignorant peasant that you are!
+I_C_T2 DCOWL1 3 vvVALKDCOWL13
+== vvVALKJ IF ~InParty("vvVALK") IsValidForPartyDialogue("vvVALK")~ THEN @464
 END
 
 //////////////////////////////////////////////

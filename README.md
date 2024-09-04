@@ -34,6 +34,7 @@ Valkrana strikes an odd balance between a child's awkward bearing and the keen e
 
   
 ## Notes   
+* Install after Unfinished Business.
 * Not romanceable.  
 * Doesn't banter with other characters.  
 * Crossmod content is fine.  

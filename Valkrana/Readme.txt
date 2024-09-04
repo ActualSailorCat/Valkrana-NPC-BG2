@@ -42,6 +42,7 @@ Starting Gear: Quarterstaff and three scrolls of Animate Dead.
 
 Notes
 -----
+Load after Unfinished Business.
 Not romanceable.
 Doesn't banter with other characters.
 Crossmod content is fine.

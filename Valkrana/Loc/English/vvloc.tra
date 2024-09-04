@@ -344,6 +344,8 @@ Undeath manifests differently from creature to creature, but its tireless nature
 @462= ~Well, if that means you intend to stick around, it's fine by me.~
 @463= ~Ah, yes. I'm a prime candidate for Ilyana's adventurer hall of fame or something. Well, if that means you intend to stick around, it's fine by me.~
 @464= ~'Kay.~ [vvVALKi]
+@465= ~I recommend an interrogation. Intel is key if we are to defy the Cowled Wizards. We can remove his skeleton afterward.~
+@466= ~That this man proclaims his magic great... Delusion, sorry peers, what is the cause, I wonder?~
 
 //////////////////////////////////////////////
 // Intel
@@ -395,6 +397,8 @@ Undeath manifests differently from creature to creature, but its tireless nature
 //////////////////////////////////////////////
 // Misc Interjections
 @600= ~This man's fanaticism is too intransigent to risk turning against the Cowled Wizards. We would only empower his cause. Best to cut him down now.~ [vvVA0600]
+@601= ~It must trouble Edwin that I am the smartest person he will ever meet. Never mind that, as a retired prince of thieves, I could entrap him a thousand times over. And he would not even know it was me.~
+@602= ~The more this miserable creature talks, the more I wish to experience the magicks contained within this artifact. I am convinced.~
 
 //////////////////////////////////////////////
 // Tree of Life
