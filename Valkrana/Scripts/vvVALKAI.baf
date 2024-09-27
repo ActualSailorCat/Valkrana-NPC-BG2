@@ -13,7 +13,10 @@ END
 
 IF
     Global("BDAI_NO_ARCANE","LOCALS",1)
-    Global("BribedCowled","GLOBAL",1)
+    OR(3)
+        Global("BribedCowled","GLOBAL",1)
+        GlobalTimerNotExpired("SpellsBad","GLOBAL")
+        GlobalGT("CowledWarning","GLOBAL",6)
     ActionListEmpty()
     InParty(Myself)
 THEN
@@ -24,6 +27,8 @@ END
 IF
     Global("BDAI_NO_ARCANE","LOCALS",0)
     Global("BribedCowled","GLOBAL",0)
+    GlobalLT("CowledWarning","GLOBAL",7)
+    GlobalTimerExpired("SpellsBad","GLOBAL")
     ActionListEmpty()
     InParty(Myself)
     AreaType(OUTDOOR)
@@ -99,7 +104,7 @@ THEN
         Continue()
 END
 
-// Give the player a fight if the initiate combat.
+// Give the player a fight if they initiate combat.
 IF
     Global("vvVALKHostilePC","GLOBAL",1)
     !GlobalTimerNotExpired("vvVALKHostilePCPrep","LOCALS")
@@ -295,6 +300,7 @@ END
 IF
     ActionListEmpty()
     InParty(Myself)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     HaveSpell(WIZARD_SPELL_TURNING)  // SPWI701.SPL (Spell Turning)
     OR(4)
         See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
@@ -311,6 +317,7 @@ END
 IF
     ActionListEmpty()
     InParty(Myself)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HaveSpell(WIZARD_ABSOLUTE_IMMUNITY)  // SPWI907.SPL (Absolute Immunity)
     !GlobalTimerNotExpired("WeaponDefense_On","LOCALS")
@@ -325,6 +332,7 @@ END
 
 IF
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HaveSpell(WIZARD_IMPROVED_MANTLE)  // SPWI808.SPL (Improved Mantle)
     !GlobalTimerNotExpired("WeaponDefense_On","LOCALS")
@@ -339,6 +347,7 @@ END
 
 IF
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HaveSpell(WIZARD_MANTLE)  // SPWI708.SPL (Mantle)
     !GlobalTimerNotExpired("WeaponDefense_On","LOCALS")
@@ -366,7 +375,6 @@ THEN
 END
 
 IF
-    See(NearestEnemyOf(Myself))
     ActionListEmpty()
     InParty(Myself)
     OR(2)
@@ -386,6 +394,7 @@ END
 
 IF
     See(NearestEnemyOf(Myself))
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     HaveSpell(WIZARD_SPIRIT_ARMOR)  // SPWI414.SPL (Spirit Armor)
     CheckStatGT(Myself,1,ARMORCLASS)
     !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -397,6 +406,7 @@ END
 
 IF
     See(NearestEnemyOf(Myself))
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     HaveSpell(WIZARD_GHOST_ARMOR)  // SPWI317.SPL (Ghost Armor)
     CheckStatGT(Myself,2,ARMORCLASS)
     !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -408,6 +418,7 @@ END
 
 IF
     See(NearestEnemyOf(Myself))
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     HaveSpell(WIZARD_SHIELD)  // SPWI114.SPL (Shield)
     CheckStatGT(Myself,4,ARMORCLASS)
     !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -456,6 +467,7 @@ END
 
 IF
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     HaveSpell(WIZARD_MINOR_SPELL_DEFLECTION)  // SPWI318.SPL (Minor Spell Deflection)
     OR(4)
         See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
@@ -471,6 +483,7 @@ END
 
 IF
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     HaveSpell(WIZARD_MINOR_SPELL_TURNING)  // SPWI522.SPL (Minor Spell Turning)
     OR(4)
         See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
@@ -490,6 +503,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -517,6 +531,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -545,6 +560,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -573,6 +589,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -601,6 +618,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -627,6 +645,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -653,6 +672,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -679,6 +699,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -707,6 +728,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -735,6 +757,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -763,6 +786,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -791,6 +815,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -819,6 +844,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -847,6 +873,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -874,6 +901,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -901,6 +929,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -928,6 +957,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -955,6 +985,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -982,6 +1013,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -1009,6 +1041,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -1036,6 +1069,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -1063,6 +1097,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -1090,6 +1125,7 @@ END
 IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     ActionListEmpty()
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     OR(2)
         !GlobalTimerNotExpired("BD_Cast","LOCALS")
         CheckStatGT(Myself,0,AURACLEANSING)
@@ -1134,6 +1170,7 @@ END
 IF
     ActionListEmpty()
     Global("BD_DInv","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     HaveSpell(WIZARD_DETECT_INVISIBILITY)  // SPWI203.SPL (Detect Invisibility)
     OR(6)
         SpellCast([EVILCUTOFF],WIZARD_INVISIBILITY)  // SPWI206.SPL (Invisibility)
@@ -1473,6 +1510,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HaveSpell(WIZARD_SIMULACRUM)  // SPWI804.SPL (Simulacrum)
     NumCreatureGT([EVILCUTOFF],4)
@@ -1485,6 +1523,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HaveSpell(WIZARD_IMPRISONMENT)  // SPWI910.SPL (Imprisonment)
     NumCreatureGT([EVILCUTOFF],4)
@@ -1497,6 +1536,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     HaveSpell(WIZARD_CHAIN_LIGHTNING)  // SPWI615.SPL (Chain Lightning)
     !HasBounceEffects(LastSeenBy(Myself))
     !Range(LastSeenBy(Myself),10)
@@ -1509,6 +1549,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HPLT(LastSeenBy(Myself),50)
     HPGT(LastSeenBy(Myself),20)
@@ -1523,6 +1564,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HaveSpell(WIZARD_ABI_DALZIMS_HORRID_WILTING)  // SPWI812.SPL (Abi-Dalzim's Horrid Wilting)
     HPGT(LastSeenBy(Myself),20)
@@ -1535,6 +1577,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HaveSpell(WIZARD_ENERGY_DRAIN)  // SPWI914.SPL (Energy Drain)
     NumCreatureGT([EVILCUTOFF],4)
@@ -1547,6 +1590,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HPGT(LastSeenBy(Myself),30)
     !HasBounceEffects(LastSeenBy(Myself))
@@ -1560,6 +1604,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     HaveSpell(WIZARD_CONTROL_UNDEAD)  // SPWI720.SPL (Control Undead)
     See(NearestEnemyOfType([0.UNDEAD]))
     !StateCheck(NearestEnemyOf(Myself),STATE_HELPLESS)
@@ -1572,6 +1617,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     HaveSpell(WIZARD_HOLD_UNDEAD)  // SPWI324.SPL (Hold Undead)
     See(NearestEnemyOfType([0.UNDEAD]))
     !CheckStatGT(NearestEnemyOf(Myself),0,HELD)
@@ -1584,6 +1630,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     !Range(NearestEnemyOf(Myself),30)
     HaveSpell(WIZARD_CLOUDKILL)  // SPWI502.SPL (Cloudkill)
@@ -1596,6 +1643,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     !Range(NearestEnemyOf(Myself),30)
     HaveSpell(WIZARD_DEATH_FOG)  // SPWI614.SPL (Death Fog)
@@ -1608,6 +1656,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     !HasBounceEffects(LastSeenBy(Myself))
     !General(LastSeenBy(Myself),HUMANOID)
@@ -1621,6 +1670,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     HaveSpell(WIZARD_DEATH_SPELL)  // SPWI605.SPL (Death Spell)
     See(NearestEnemyOf(Myself))
     !HasBounceEffects(LastSeenBy(Myself))
@@ -1633,6 +1683,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HPGT(LastSeenBy(Myself),20)
     !HasBounceEffects(LastSeenBy(Myself))
@@ -1645,6 +1696,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     HaveSpell(WIZARD_SLOW)  // SPWI312.SPL (Slow)
     !StateCheck(LastSeenBy(Myself),STATE_SLOWED)
     !Range(LastSeenBy(Myself),10)
@@ -1978,6 +2030,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HPLT(LastSeenBy(Myself),50)
     HPGT(LastSeenBy(Myself),20)
@@ -1992,6 +2045,7 @@ END
 IF
     ActionListEmpty()
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+    Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     !HasBounceEffects(LastSeenBy(Myself))
     HaveSpell(WIZARD_LARLOCH_MINOR_DRAIN)  // SPWI119.SPL (Larloch's Minor Drain)
@@ -2105,7 +2159,6 @@ END
 IF
     Global("BDAI_DISABLE_ATTACK","LOCALS",0)
     ActionListEmpty()
-
     CheckStat(Myself,0,SANCTUARY)
     WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
     WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
@@ -2121,7 +2174,6 @@ END
 IF
     Global("BDAI_DISABLE_ATTACK","LOCALS",0)
     ActionListEmpty()
-
     CheckStat(Myself,0,SANCTUARY)
     WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
     WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
@@ -2137,7 +2189,6 @@ END
 IF
     Global("BDAI_DISABLE_ATTACK","LOCALS",0)
     ActionListEmpty()
-
     CheckStat(Myself,0,SANCTUARY)
     WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
     WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
@@ -2153,7 +2204,6 @@ END
 IF
     Global("BDAI_DISABLE_ATTACK","LOCALS",0)
     ActionListEmpty()
-
     CheckStat(Myself,0,SANCTUARY)
     See(NearestEnemyOf(Myself))
     !StateCheck(NearestEnemyOf(Myself),STATE_REALLY_DEAD)
