@@ -28,6 +28,7 @@ Valkrana strikes an odd balance between a child's awkward bearing and the keen e
 * 100+ Voice Lines: Interaction, interjection, and quest dialogue are all fully voiced.
 * Stats: STR 8, DEX 10, CON 14, INT 21, WIS 16, CHA 7
 * Alignment: Neutral
+* Age: 1631
 * Bonuses: Valkrana's fascination with the arcane provides a boost to Lore. She also knows the Simulacrum spell despite her specialist limitation.
 * Bones Alive!: Valkrana's quest is freeform and progresses as you confront the Cowled Wizards and find magic items.
 * Spellcasting: A focus on defense, necromancy, divination, and countering other wizards.
