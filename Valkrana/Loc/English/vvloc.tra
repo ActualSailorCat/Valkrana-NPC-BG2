@@ -399,6 +399,8 @@ Undeath manifests differently from creature to creature, but its tireless nature
 @600= ~This man's fanaticism is too intransigent to risk turning against the Cowled Wizards. We would only empower his cause. Best to cut him down now.~ [vvVA0600]
 @601= ~It must trouble Edwin that I am the smartest person he will ever meet. Never mind that, as a retired prince of thieves, I could entrap him a thousand times over. And he would not even know it was me.~
 @602= ~The more this miserable creature talks, the more I wish to experience the magicks contained within this artifact. I am convinced.~
+@603= ~Children are tempered by trials such as these. Bettered. That she survived deserves a pat on the head, a treat, and a warm bed. If not those, then you should have offered coin.~
+@604= ~Children are tempered by trials such as these. Bettered. That she survived deserves a pat on the head, a treat, and a warm bed. Your coin will afford her that and more, if she is clever.~
 
 //////////////////////////////////////////////
 // Tree of Life
@@ -448,7 +450,7 @@ Undeath manifests differently from creature to creature, but its tireless nature
 // Installer
 @-1006= "--------------------------------------------------------------------
 --------------------------------------------------------------------
-(u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ v1.01.02
+(u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ v1.01.06
 
 The multiverse's most awkward necromancer, Valkrana
 Recruitable Companion NPC for BG2EE

@@ -737,6 +737,16 @@ I_C_T2 DCOWL1 3 vvVALKDCOWL13
 == vvVALKJ IF ~InParty("vvVALK") IsValidForPartyDialogue("vvVALK")~ THEN @464
 END
 
+// Slave Girl  O-okay! Thank you again, <PRO_SIRMAAM>! I am sure the Lady of Joy will smile on you!
+// 4: PC gave gold. 5: PC didn't give gold.
+I_C_T2 GIRL2 4 vvVALKDGIRL24
+== vvVALKJ IF ~InParty("vvVALK") IsValidForPartyDialogue("vvVALK")~ THEN @603
+END
+
+I_C_T2 GIRL2 5 vvVALKDGIRL25
+== vvVALKJ IF ~InParty("vvVALK") IsValidForPartyDialogue("vvVALK")~ THEN @604
+END
+
 //////////////////////////////////////////////
 // Tree of Life from Branwen
 EXTEND_BOTTOM PLAYER1 33
