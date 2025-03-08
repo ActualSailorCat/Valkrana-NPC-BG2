@@ -1,4 +1,6 @@
+![93-1712419198-437806464](https://github.com/user-attachments/assets/c9795168-d904-44b1-aa10-015374f09814)
 # Valkrana NPC BG2
+
 Bring the multiverse's most awkward necromancer to your Baldur's Gate II party with the Valkrana Companion NPC mod. This full-fledged companion includes voiced lines, a character quest, world reactions, tailored scripts, and more. Character portraits by Nyama. Voiced by Sailor Cat.  
   
 At first, Valkrana appears a skeletal wizard detached from the world around her. Provided you don't succumb to your bloodline, she hardly raises an objection no matter how dumb or duplicitous your actions. But given time with her awkwardness, you'll come to find that despite her enduring pragmatism, she is anything but detached.  
@@ -26,6 +28,7 @@ Valkrana strikes an odd balance between a child's awkward bearing and the keen e
 * 100+ Voice Lines: Interaction, interjection, and quest dialogue are all fully voiced.
 * Stats: STR 8, DEX 10, CON 14, INT 21, WIS 16, CHA 7
 * Alignment: Neutral
+* Age: 1631
 * Bonuses: Valkrana's fascination with the arcane provides a boost to Lore. She also knows the Simulacrum spell despite her specialist limitation.
 * Bones Alive!: Valkrana's quest is freeform and progresses as you confront the Cowled Wizards and find magic items.
 * Spellcasting: A focus on defense, necromancy, divination, and countering other wizards.
