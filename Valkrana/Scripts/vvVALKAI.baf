@@ -1513,7 +1513,7 @@ IF
     Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HaveSpell(WIZARD_SIMULACRUM)  // SPWI804.SPL (Simulacrum)
-    NumCreatureGT([EVILCUTOFF],4)
+    NumCreatureGT([EVILCUTOFF],3)
     RandomNum(4,1)
 THEN
     RESPONSE #100
@@ -1526,7 +1526,7 @@ IF
     Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HaveSpell(WIZARD_IMPRISONMENT)  // SPWI910.SPL (Imprisonment)
-    NumCreatureGT([EVILCUTOFF],4)
+    NumCreatureGT([EVILCUTOFF],3)
     RandomNum(4,1)
 THEN
     RESPONSE #100
@@ -1538,7 +1538,7 @@ IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
-    NumCreatureGT([EVILCUTOFF],4)
+    NumCreatureGT([EVILCUTOFF],3)
     HaveSpell(WIZARD_CHAIN_LIGHTNING)  // SPWI615.SPL (Chain Lightning)
     !HasBounceEffects(LastSeenBy(Myself))
     !Range(LastSeenBy(Myself),10)
@@ -1582,7 +1582,6 @@ IF
     Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
     HaveSpell(WIZARD_ENERGY_DRAIN)  // SPWI914.SPL (Energy Drain)
-    NumCreatureGT([EVILCUTOFF],4)
     RandomNum(4,1)
 THEN
     RESPONSE #100
@@ -1636,7 +1635,8 @@ IF
     See(NearestEnemyOf(Myself))
     !Range(NearestEnemyOf(Myself),30)
     HaveSpell(WIZARD_CLOUDKILL)  // SPWI502.SPL (Cloudkill)
-    RandomNum(4,1)
+    NumCreatureVsPartyGT([ENEMY],3)
+    RandomNum(2,1)
 THEN
     RESPONSE #100
         Spell(LastSeenBy(Myself),WIZARD_CLOUDKILL)  // SPWI502.SPL (Cloudkill)
@@ -1649,7 +1649,8 @@ IF
     See(NearestEnemyOf(Myself))
     !Range(NearestEnemyOf(Myself),30)
     HaveSpell(WIZARD_DEATH_FOG)  // SPWI614.SPL (Death Fog)
-    RandomNum(4,1)
+    NumCreatureVsPartyGT([ENEMY],4)
+    RandomNum(2,1)
 THEN
     RESPONSE #100
         Spell(LastSeenBy(Myself),WIZARD_DEATH_FOG)  // SPWI614.SPL (Death Fog)
@@ -2050,11 +2051,9 @@ IF
     Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
     Global("BDAI_NO_ARCANE","LOCALS",0)
     See(NearestEnemyOf(Myself))
-    HPLT(LastSeenBy(Myself),50)
     HPGT(LastSeenBy(Myself),20)
     !HasBounceEffects(LastSeenBy(Myself))
     HaveSpell(WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
-    RandomNum(4,1)
 THEN
     RESPONSE #100
         Spell(NearestEnemyOf(Myself),WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)

@@ -45,7 +45,7 @@ Valkrana strikes an odd balance between a child's awkward bearing and the keen e
 @37= ~Well, you miss one-hundred percent of the spells you do not cast.~ [vvVALK1] // CRITICAL_MISS
 @38= ~Blasted thing is immune.~ [vvVALK2] // TARGET_IMMUNE
 @39= ~I am not a pack skeleton.~ [vvVALK3] // INVENTORY_FULL
-@40= ~Lint obtained.~ [vvVALK4] // PICKED_POCKET
+@40= ~Lint obtained.~ // PICKED_POCKET
 @41= ~The shadows contain strange and terrible things... and they are my darling's me.~ [vvVALK5] // HIDDEN_IN_SHADOWS
 @42= ~No... My spell...~ [vvVALK6] // SPELL_DISRUPTED
 @43= ~Now, we wait.~ [vvVALK7] // SET_A_TRAP
