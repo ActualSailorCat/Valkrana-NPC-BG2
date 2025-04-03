@@ -1635,7 +1635,7 @@ IF
     See(NearestEnemyOf(Myself))
     !Range(NearestEnemyOf(Myself),30)
     HaveSpell(WIZARD_CLOUDKILL)  // SPWI502.SPL (Cloudkill)
-    NumCreatureVsPartyGT([ENEMY],3)
+    NumCreatureGT([EVILCUTOFF],3)
     RandomNum(2,1)
 THEN
     RESPONSE #100
@@ -1649,7 +1649,7 @@ IF
     See(NearestEnemyOf(Myself))
     !Range(NearestEnemyOf(Myself),30)
     HaveSpell(WIZARD_DEATH_FOG)  // SPWI614.SPL (Death Fog)
-    NumCreatureVsPartyGT([ENEMY],4)
+    NumCreatureGT([EVILCUTOFF],4)
     RandomNum(2,1)
 THEN
     RESPONSE #100
@@ -1677,7 +1677,7 @@ IF
     HaveSpell(WIZARD_DEATH_SPELL)  // SPWI605.SPL (Death Spell)
     See(NearestEnemyOf(Myself))
     !HasBounceEffects(LastSeenBy(Myself))
-    NumCreatureVsPartyGT([ENEMY],4)
+    NumCreatureGT([EVILCUTOFF],4)
 THEN
     RESPONSE #100
         Spell(LastSeenBy(Myself),WIZARD_DEATH_SPELL)  // SPWI605.SPL (Death Spell)
