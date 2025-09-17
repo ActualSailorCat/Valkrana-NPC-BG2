@@ -2,7 +2,7 @@
 --------------------------------------------------------------------
 (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/
 Valkrana Companion NPC mod for Baldur's Gate II EE by Sailor Cat
-Character art by Nyama https://www.pixiv.net/en/users/7499
+Character art by Sitigatu https://xfolio.jp/portfolio/Sitigatu0974
 Character website https://valkrana.moe
 
 --------------------------------------------------------------------
@@ -16,7 +16,7 @@ Installation:
 
 --------------------------------------------------------------------
 --------------------------------------------------------------------
-Bring the multiverse's most awkward necromancer to your Baldur's Gate II party with the Valkrana Companion NPC mod. This full-fledged companion includes voiced lines, a character quest, world reactions, tailored scripts, and more. Character portraits by Nyama. Voiced by Sailor Cat.
+Bring the multiverse's most awkward necromancer to your Baldur's Gate II party with the Valkrana Companion NPC mod. This full-fledged companion includes voiced lines, a character quest, world reactions, tailored scripts, and more. Character portraits by Sitigatu. Voiced by Sailor Cat.
 
 At first, Valkrana appears a skeletal wizard detached from the world around her. Provided you don't succumb to your bloodline, she hardly raises an objection no matter how dumb or duplicitous your actions. But given time with her awkwardness, you'll come to find that despite her enduring pragmatism, she is anything but detached.
 

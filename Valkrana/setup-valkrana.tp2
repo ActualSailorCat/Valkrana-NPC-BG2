@@ -1,6 +1,6 @@
 BACKUP ~Valkrana/Backup~
 AUTHOR ~Sailor Cat (a.sailor.cat@gmail.com)~
-VERSION ~v1.01.09~
+VERSION ~v1.02.00~
 
 //////////////////////////////////////////////
 // Enhanced Edition Trilogy Stuff
@@ -78,7 +78,7 @@ SAY BATTLE_CRY3 @45
 WRITE_ASCII SCRIPT_OVERRIDE ~vvVALK~
 WRITE_ASCII DIALOG ~vvVALK~
 WRITE_ASCII 0x280 ~vvVALK~
-WRITE_ASCII 0x0034 ~vvVALKS~     // Party Portrait
+WRITE_ASCII 0x0034 ~vvVALKM~     // Party Portrait
 WRITE_ASCII 0x003c ~vvVALKL~     // Profile Portrait
 
 COPY "Valkrana\Portrait" "override"
