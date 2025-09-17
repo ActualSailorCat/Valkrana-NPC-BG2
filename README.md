@@ -1,4 +1,4 @@
-![93-1712419198-437806464](https://github.com/user-attachments/assets/c9795168-d904-44b1-aa10-015374f09814)
+![Character Record](https://raw.githubusercontent.com/ActualSailorCat/Valkrana-NPC-BG2/refs/heads/main/Valkrana/screenshot_2.jpg)
 # Valkrana NPC BG2
 
 Bring the multiverse's most awkward necromancer to your Baldur's Gate II party with the Valkrana Companion NPC mod. This full-fledged companion includes voiced lines, a character quest, world reactions, tailored scripts, and more. Character portraits by Sitigatu. Voiced by Sailor Cat.  
