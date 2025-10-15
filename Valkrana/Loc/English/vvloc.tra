@@ -1,7 +1,7 @@
 //////////////////////////////////////////////
 // Add integer gaps between dialogue blocks so I don't need to cascade +1 everything if I need to add something after the fact.
 
-@1=~Valkrana Companion NPC Mod for BG2EE~
+@1=~Valkrana NPC Mod for BG2EE~
 @2=~Valkrana~
 @3=~When asked about her past, VALKRANA speaks with gusto unusual to the skeleton about her service to and relationship with the great, mighty, unrivaled witch Ilyana Miraquinal. Until Ilyana, Valkrana was unfinished, incomplete. With a kiss, Ilyana brought out the best in her, filled a hole in Valkrana purpose-dug for lifelong obsession. What followed was adventure after adventure, travails shared as companions to further the renown of the hero Ilyana. Many of which, you're treated to in great detail. Currently, Valkrana serves as Ilyana's envoy in this corner of Realmspace.
 
@@ -453,8 +453,8 @@ Undeath manifests differently from creature to creature, but its tireless nature
 (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ v1.02.00
 
 The multiverse's most awkward necromancer, Valkrana
-Recruitable Companion NPC for BG2EE
-Mod by Sailor Cat, Character art by Nyama
+Recruitable NPC for BG2EE
+Mod by Sailor Cat, Character art by Sitigatu
 https://valkrana.moe
 --------------------------------------------------------------------
 --------------------------------------------------------------------
