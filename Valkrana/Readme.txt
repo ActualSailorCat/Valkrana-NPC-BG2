@@ -47,11 +47,8 @@ Not romanceable.
 Doesn't banter with other characters.
 Crossmod content is fine.
 Untested EET compatibility. 
-Not yet compatible with classic BG2.
 
 --------------------------------------------------------------------
 --------------------------------------------------------------------
 (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/
 Many thanks to Weimer for his work on WeiDU, and all the members of the community whose posts, mods, and tutorials have been valuable references. Nuts to see PPG still around after visiting for Unfinished Business all those years ago. Thanks also to Lamei for input and info that helped in the process.
-
-Not compatible with classic BG2. While I intend to add compatibility, I decided to put off digging out all the errant washers and springs from the bottom of the drawer until after the mod has found its footing with EE.
