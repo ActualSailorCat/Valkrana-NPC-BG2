@@ -6,7 +6,7 @@ Bring the multiverse's most awkward necromancer to your Baldur's Gate II party w
 At first, Valkrana appears a skeletal wizard detached from the world around her. Provided you don't succumb to your bloodline, she hardly raises an objection no matter how dumb or duplicitous your actions. But given time with her awkwardness, you'll come to find that despite her enduring pragmatism, she is anything but detached.  
   
 (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/  
-Valkrana Companion NPC mod for Baldur's Gate II EE by Sailor Cat  
+Valkrana NPC mod for Baldur's Gate II EE by Sailor Cat  
 Character art by Sitigatu https://xfolio.jp/portfolio/Sitigatu0974
 Character website https://valkrana.moe  
   
