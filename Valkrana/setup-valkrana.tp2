@@ -1,6 +1,6 @@
 BACKUP ~Valkrana/Backup~
 AUTHOR ~Sailor Cat (a.sailor.cat@gmail.com)~
-VERSION ~v1.02.04~
+VERSION ~v1.02.05~
 
 //////////////////////////////////////////////
 // Enhanced Edition Trilogy Stuff
@@ -20,6 +20,7 @@ ALWAYS
 END
 
 //////////////////////////////////////////////
+// Simplified Chinese courtesy DiabloIORI
 LANGUAGE
     ~English~
     ~english~
