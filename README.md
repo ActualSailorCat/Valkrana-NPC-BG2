@@ -8,7 +8,8 @@ At first, Valkrana appears a skeletal wizard detached from the world around her.
 (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/ (u_x)/  
 Valkrana NPC mod for Baldur's Gate II EE by Sailor Cat  
 Character art by Sitigatu https://xfolio.jp/portfolio/Sitigatu0974
-Character website https://valkrana.moe  
+Character website https://valkrana.moe
+Simplified Chinese TL by DiabloIORI
   
 ## Installation
 1. Extract to your Baldur's Gate II root folder (ex: D:\Steam\steamapps\common\Baldur's Gate II Enhanced Edition\)  

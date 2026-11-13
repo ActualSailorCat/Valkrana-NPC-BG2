@@ -4,6 +4,7 @@
 Valkrana Companion NPC mod for Baldur's Gate II EE by Sailor Cat
 Character art by Sitigatu https://xfolio.jp/portfolio/Sitigatu0974
 Character website https://valkrana.moe
+Simplified Chinese TL by DiabloIORI
 
 --------------------------------------------------------------------
 --------------------------------------------------------------------
