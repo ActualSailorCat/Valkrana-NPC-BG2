@@ -24,6 +24,10 @@ LANGUAGE
     ~English~
     ~english~
     ~Valkrana/Loc/English/vvloc.tra~
+LANGUAGE
+    ~Schinese~
+    ~schinese~
+    ~Valkrana/Loc/Schinese/vvloc.tra~
 
 //////////////////////////////////////////////
 BEGIN @1
